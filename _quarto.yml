@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: _site
+
+lang: bs
+
+website:
+  title: "Lekcije iz Origin softverskog paketa"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Početna
+      - href: lekcije/index.qmd
+        text: Lekcije
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Lekcije"
+        contents:
+          - lekcije/index.qmd
+          - lekcije/lekcija-1-zadatak-1.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css: styles.css

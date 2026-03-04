@@ -1,0 +1,51 @@
+---
+title: "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+---
+
+## Tema
+
+**Slobodni pad — obrada podataka i prvi graf sa greškama u Origin-u**
+
+## Podaci (unesi/importuj u tabelu)
+
+Kolone moraju biti: **t**, **x**, **σx** (sa jedinicama).
+
+| t (s) | x (m) | σx (m) |
+| ----: | ----: | -----: |
+|  0.00 | 0.000 |  0.005 |
+|  0.10 | 0.049 |  0.005 |
+|  0.20 | 0.196 |  0.005 |
+|  0.30 | 0.441 |  0.005 |
+|  0.40 | 0.784 |  0.005 |
+|  0.50 | 1.225 |  0.005 |
+|  0.60 | 1.764 |  0.005 |
+
+## Šta treba uraditi
+
+1. Kreiraj projekat i u njega unesi/importuj podatke u jednu tabelu.
+2. Jasno definiši u tabeli:
+   - nezavisnu varijablu **t** kao X (s),
+   - zavisnu varijablu **x** kao Y (m),
+   - nesigurnost **σx** kao grešku za Y (m).
+3. Napravi grafikon:
+   - **scatter** tačke za (x(t)),
+   - prikaži **error bars** koristeći σx.
+4. Uredi graf da ispunjava minimalne naučne standarde:
+   - osa x: **t (s)**
+   - osa y: **x (m)**
+   - naslov grafa: **Slobodni pad: x(t)**
+   - na graf dodaj tekst: **σx = 0.005 m**
+5. Sačuvaj projekat i izvezi graf u fajl.
+
+## Predaja
+
+- Origin projekat: `Lekcija1_Zadatak1_ImePrezime.opju`
+- Izvezeni graf: `Graf1_SlobodniPad.pdf` *(ili PNG, 300 dpi)*
+
+## Kriterijumi (checklist)
+
+- [ ] tabela ima nazive kolona i jedinice (t(s), x(m), σx(m))
+- [ ] σx je korišten kao Y-greška
+- [ ] graf je scatter + error bars
+- [ ] ose i naslov su pravilno označeni
+- [ ] predati su projekat i export grafa

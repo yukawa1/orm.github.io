@@ -1,0 +1,15 @@
+---
+title: "Početna"
+---
+
+# Dobro došli
+
+Ovo je sajt za objavu lekcija iz **Origin** softverskog paketa.
+
+## Trenutno dostupno
+
+- [Lekcija 1 — Zadatak 1 (samo uputstvo)](lekcije/lekcija-1-zadatak-1.qmd)
+
+## Plan
+
+Na ovoj stranici će se objavljivati nove lekcije i zadaci.
