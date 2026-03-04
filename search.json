@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Početna",
+    "section": "",
+    "text": "Ovo je sajt za objavu lekcija iz Origin softverskog paketa.\n\n\n\nLekcija 1 — Zadatak 1 (samo uputstvo)\n\n\n\n\nNa ovoj stranici će se objavljivati nove lekcije i zadaci."
+  },
+  {
+    "objectID": "index.html#trenutno-dostupno",
+    "href": "index.html#trenutno-dostupno",
+    "title": "Početna",
+    "section": "",
+    "text": "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+  },
+  {
+    "objectID": "index.html#plan",
+    "href": "index.html#plan",
+    "title": "Početna",
+    "section": "",
+    "text": "Na ovoj stranici će se objavljivati nove lekcije i zadaci."
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html",
+    "href": "lekcije/lekcija-1-zadatak-1.html",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "",
+    "text": "Slobodni pad — obrada podataka i prvi graf sa greškama u Origin-u",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#tema",
+    "href": "lekcije/lekcija-1-zadatak-1.html#tema",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "",
+    "text": "Slobodni pad — obrada podataka i prvi graf sa greškama u Origin-u",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#podaci-unesiimportuj-u-tabelu",
+    "href": "lekcije/lekcija-1-zadatak-1.html#podaci-unesiimportuj-u-tabelu",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "Podaci (unesi/importuj u tabelu)",
+    "text": "Podaci (unesi/importuj u tabelu)\nKolone moraju biti: t, x, σx (sa jedinicama).\n\n\n\nt (s)\nx (m)\nσx (m)\n\n\n\n\n0.00\n0.000\n0.005\n\n\n0.10\n0.049\n0.005\n\n\n0.20\n0.196\n0.005\n\n\n0.30\n0.441\n0.005\n\n\n0.40\n0.784\n0.005\n\n\n0.50\n1.225\n0.005\n\n\n0.60\n1.764\n0.005",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#šta-treba-uraditi",
+    "href": "lekcije/lekcija-1-zadatak-1.html#šta-treba-uraditi",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "Šta treba uraditi",
+    "text": "Šta treba uraditi\n\nKreiraj projekat i u njega unesi/importuj podatke u jednu tabelu.\nJasno definiši u tabeli:\n\nnezavisnu varijablu t kao X (s),\nzavisnu varijablu x kao Y (m),\nnesigurnost σx kao grešku za Y (m).\n\nNapravi grafikon:\n\nscatter tačke za (x(t)),\nprikaži error bars koristeći σx.\n\nUredi graf da ispunjava minimalne naučne standarde:\n\nosa x: t (s)\nosa y: x (m)\nnaslov grafa: Slobodni pad: x(t)\nna graf dodaj tekst: σx = 0.005 m\n\nSačuvaj projekat i izvezi graf u fajl.",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#predaja",
+    "href": "lekcije/lekcija-1-zadatak-1.html#predaja",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "Predaja",
+    "text": "Predaja\n\nOrigin projekat: Lekcija1_Zadatak1_ImePrezime.opju\nIzvezeni graf: Graf1_SlobodniPad.pdf (ili PNG, 300 dpi)",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#kriterijumi-checklist",
+    "href": "lekcije/lekcija-1-zadatak-1.html#kriterijumi-checklist",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "Kriterijumi (checklist)",
+    "text": "Kriterijumi (checklist)\n\ntabela ima nazive kolona i jedinice (t(s), x(m), σx(m))\nσx je korišten kao Y-greška\ngraf je scatter + error bars\nose i naslov su pravilno označeni\npredati su projekat i export grafa",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/index.html",
+    "href": "lekcije/index.html",
+    "title": "Lekcije",
+    "section": "",
+    "text": "Lekcije iz Origin-a\n\nLekcija 1 — Zadatak 1 (samo uputstvo)",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcije"
+    ]
+  }
+]
