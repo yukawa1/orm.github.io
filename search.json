@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Početna",
     "section": "",
-    "text": "Ovo je sajt za objavu lekcija iz Origin softverskog paketa.\n\n\n\nLekcija 1 — Zadatak 1 (samo uputstvo)\nLekcija 2 — Binomna raspodjela\n\n\n\n\nNa ovoj stranici će se objavljivati nove lekcije i zadaci."
+    "text": "Ovo je sajt za objavu lekcija iz Origin softverskog paketa.\n\n\n\nLekcija 1 — Zadatak 1 (samo uputstvo)\nLekcija 2 — Teorijske osnove binomne raspodjele\nLekcija 2 — Vizualizacija binomne raspodjele u Origin-u\n\n\n\n\nNa ovoj stranici će se objavljivati nove lekcije i zadaci."
   },
   {
     "objectID": "index.html#trenutno-dostupno",
     "href": "index.html#trenutno-dostupno",
     "title": "Početna",
     "section": "",
-    "text": "Lekcija 1 — Zadatak 1 (samo uputstvo)\nLekcija 2 — Binomna raspodjela"
+    "text": "Lekcija 1 — Zadatak 1 (samo uputstvo)\nLekcija 2 — Teorijske osnove binomne raspodjele\nLekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
   },
   {
     "objectID": "index.html#plan",
@@ -21,111 +21,276 @@
     "text": "Na ovoj stranici će se objavljivati nove lekcije i zadaci."
   },
   {
-    "objectID": "lekcije/lekcija-2-binomna-raspodjela.html",
-    "href": "lekcije/lekcija-2-binomna-raspodjela.html",
-    "title": "Lekcija 2 — Binomna raspodjela",
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html",
+    "href": "lekcije/lekcija-2-teorija-binomne.html",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
     "section": "",
-    "text": "Vizualizacija binomne raspodjele i analiza verovatnoće",
+    "text": "Pre nego što vizualizujemo binomnu raspodjelu u Origin-u, potrebno je razumeti teorijske koncepte koji stoje iza nje. Ova lekcija pokriva osnovne pojmove teorije verovatnoće.",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 2 — Binomna raspodjela"
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-2-binomna-raspodjela.html#tema",
-    "href": "lekcije/lekcija-2-binomna-raspodjela.html#tema",
-    "title": "Lekcija 2 — Binomna raspodjela",
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#uvod",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#uvod",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
     "section": "",
-    "text": "Vizualizacija binomne raspodjele i analiza verovatnoće",
+    "text": "Pre nego što vizualizujemo binomnu raspodjelu u Origin-u, potrebno je razumeti teorijske koncepte koji stoje iza nje. Ova lekcija pokriva osnovne pojmove teorije verovatnoće.",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 2 — Binomna raspodjela"
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-2-binomna-raspodjela.html#teorijski-uvod",
-    "href": "lekcije/lekcija-2-binomna-raspodjela.html#teorijski-uvod",
-    "title": "Lekcija 2 — Binomna raspodjela",
-    "section": "Teorijski uvod",
-    "text": "Teorijski uvod\nBinomna raspodjela opisuje broj uspeha u nizu od n nezavisnih eksperimenata, gde svaki eksperiment ima verovatnoću uspeha p.\nVerovatnoća tačno k uspeha u n pokušaja je:\n\\[P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}\\]\ngde je: - n = broj pokušaja - p = verovatnoća uspeha u jednom pokušaju - k = broj uspeha (0, 1, 2, …, n)",
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#očekivanje-srednja-vrednost",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#očekivanje-srednja-vrednost",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
+    "section": "1. Očekivanje (Srednja vrednost)",
+    "text": "1. Očekivanje (Srednja vrednost)\n\nDefinicija\nOčekivanje (ili srednja vrednost, označava se sa E(X) ili μ) je prosečna vrednost koju slučajna promenljiva X uzima u velikom broju ponavljanja eksperimenta.\nZa diskretnu slučajnu promenljivu X:\n\\[E(X) = \\sum_{i} x_i \\cdot P(X = x_i)\\]\ngde je: - \\(x_i\\) - moguće vrednosti koje X može uzeti - \\(P(X = x_i)\\) - verovatnoća da X uzme vrednost \\(x_i\\)\n\n\nIntuitivno objašnjenje\nOčekivanje je “balansna tačka” raspodjele. Ako biste veliki broj puta ponovili eksperiment i uzeli prosek svih rezultata, dobili biste očekivanje.\n\n\nPrimer 1: Bacanje kockice\nBacamo pravilnu kockicu. Koja je srednja vrednost?\nMoguće vrednosti: 1, 2, 3, 4, 5, 6 (svaka sa verovatnoćom 1/6)\n\\[E(X) = 1 \\cdot \\frac{1}{6} + 2 \\cdot \\frac{1}{6} + 3 \\cdot \\frac{1}{6} + 4 \\cdot \\frac{1}{6} + 5 \\cdot \\frac{1}{6} + 6 \\cdot \\frac{1}{6}\\]\n\\[E(X) = \\frac{1+2+3+4+5+6}{6} = \\frac{21}{6} = 3.5\\]\nZaključak: Iako kockica nikada ne pokaže 3.5, to je prosečan rezultat u velikom broju bacanja.\n\n\nPrimer 2: Novčani dobitak\nIgra: Bacamo novčić. Ako padne glava, dobijate 100 din. Ako padne pismo, gubite 50 din.\n\\[E(X) = 100 \\cdot 0.5 + (-50) \\cdot 0.5 = 50 - 25 = 25 \\text{ din}\\]\nZaključak: U proseku dobijate 25 dinara po igri.\n\n\nSvojstva očekivanja\n\nLinearnost: \\[E(aX + b) = a \\cdot E(X) + b\\]\nAditivnost: \\[E(X + Y) = E(X) + E(Y)\\]\n(ovo važi čak i ako X i Y nisu nezavisni!)",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 2 — Binomna raspodjela"
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-2-binomna-raspodjela.html#zadatak-1-bacanje-novčića",
-    "href": "lekcije/lekcija-2-binomna-raspodjela.html#zadatak-1-bacanje-novčića",
-    "title": "Lekcija 2 — Binomna raspodjela",
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#bernoulijev-eksperiment",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#bernoulijev-eksperiment",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
+    "section": "2. Bernoulijev eksperiment",
+    "text": "2. Bernoulijev eksperiment\n\nDefinicija\nBernoulijev eksperiment (ili Bernoulijev ogled) je najjednostavniji slučajan eksperiment koji ima samo dva moguća ishoda:\n\nUspeh (S - success) sa verovatnoćom p\nNeuspeh (F - failure) sa verovatnoćom q = 1-p\n\n\n\nBernoulijeva slučajna promenljiva\nOznačavamo ishode numerički:\n\\[X = \\begin{cases}\n1 & \\text{ako je uspeh (sa verovatnoćom } p\\text{)} \\\\\n0 & \\text{ako je neuspeh (sa verovatnoćom } 1-p\\text{)}\n\\end{cases}\\]\nRaspodjela verovatnoća:\n\n\n\nX\nP(X)\n\n\n\n\n0\n1-p\n\n\n1\np\n\n\n\n\n\nPrimeri Bernoulijevih eksperimenata\n\nPrimer 1: Bacanje novčića\n\nUspeh: Glava (p = 0.5)\nNeuspeh: Pismo (1-p = 0.5)\n\n\n\nPrimer 2: Jedan odgovor na testu\n\nUspeh: Tačan odgovor (p = 0.25 za 4 ponuđena)\nNeuspeh: Pogrešan odgovor (1-p = 0.75)\n\n\n\nPrimer 3: Kontrola kvaliteta\n\nUspeh: Ispravan proizvod (p = 0.98)\nNeuspeh: Neispravan proizvod (1-p = 0.02)\n\n\n\nPrimer 4: Slobodno bacanje u košarci\n\nUspeh: Koš (p = 0.75 za dobrog igrača)\nNeuspeh: Promašaj (1-p = 0.25)\n\n\n\n\nParametri Bernoulijeve raspodjele\nOčekivanje: \\[E(X) = 0 \\cdot (1-p) + 1 \\cdot p = p\\]\nVarijansa: \\[Var(X) = E(X^2) - [E(X)]^2 = p - p^2 = p(1-p)\\]\nStandardna devijacija: \\[\\sigma = \\sqrt{p(1-p)}\\]\n\n\nPrimer izračunavanja\nZa bacanje novčića (p = 0.5): - E(X) = 0.5 - Var(X) = 0.5 × 0.5 = 0.25 - σ = 0.5",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#binomna-raspodjela",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#binomna-raspodjela",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
+    "section": "3. Binomna raspodjela",
+    "text": "3. Binomna raspodjela\n\nDefinicija\nBinomna raspodjela opisuje broj uspeha u nizu od n nezavisnih Bernoulijevih eksperimenata sa istom verovatnoćom uspeha p.\nSlučajna promenljiva X predstavlja ukupan broj uspeha u n pokušaja:\n\\[X = X_1 + X_2 + X_3 + ... + X_n\\]\ngde je svaki \\(X_i\\) Bernoulijeva promenljiva sa parametrom p.\n\n\nNotacija\n\\[X \\sim \\text{Binomial}(n, p)\\]\nili\n\\[X \\sim B(n, p)\\]\n\n\nFormula za verovatnoću\nVerovatnoća da dobijemo tačno k uspeha u n pokušaja je:\n\\[P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}, \\quad k = 0, 1, 2, ..., n\\]\ngde je:\n\\[\\binom{n}{k} = \\frac{n!}{k! \\cdot (n-k)!}\\]\nbinomni koeficijent koji predstavlja broj načina da se izabere k elemenata iz n elemenata.\n\n\nObjašnjenje formule\nFormula se sastoji iz tri dela:\n\n\\(\\binom{n}{k}\\) - na koliko načina možemo dobiti k uspeha u n pokušaja\n\\(p^k\\) - verovatnoća k uspeha\n\\((1-p)^{n-k}\\) - verovatnoća (n-k) neuspeha\n\n\n\nPrimer: Bacanje novčića 3 puta\nBacamo novčić 3 puta. Kolika je verovatnoća da dobijemo tačno 2 glave?\n\nn = 3 (broj bacanja)\np = 0.5 (verovatnoća glave)\nk = 2 (želimo 2 glave)\n\n\\[P(X = 2) = \\binom{3}{2} (0.5)^2 (0.5)^{3-2}\\]\n\\[P(X = 2) = 3 \\cdot 0.25 \\cdot 0.5 = 3 \\cdot 0.125 = 0.375\\]\nProvera: Možemo dobiti 2 glave na 3 načina: - GGP (glava, glava, pismo) - GPG (glava, pismo, glava) - PGG (pismo, glava, glava)\nSvaki ishod ima verovatnoću: \\(0.5 \\times 0.5 \\times 0.5 = 0.125\\)\nUkupno: \\(3 \\times 0.125 = 0.375\\) ✓\n\n\nKompletna raspodjela: Bacanje novčića 3 puta\n\n\n\nk\nIshodi\n\\(\\binom{3}{k}\\)\n\\(p^k(1-p)^{3-k}\\)\nP(X=k)\n\n\n\n\n0\nPPP\n1\n0.125\n0.125\n\n\n1\nGPP, PGP, PPG\n3\n0.125\n0.375\n\n\n2\nGGP, GPG, PGG\n3\n0.125\n0.375\n\n\n3\nGGG\n1\n0.125\n0.125\n\n\n\nSuma: 0.125 + 0.375 + 0.375 + 0.125 = 1.000 ✓",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#parametri-binomne-raspodjele",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#parametri-binomne-raspodjele",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
+    "section": "4. Parametri binomne raspodjele",
+    "text": "4. Parametri binomne raspodjele\n\nOčekivanje (Srednja vrednost)\n\\[E(X) = n \\cdot p\\]\nDokaz (koristeći linearnost):\n\\[X = X_1 + X_2 + ... + X_n\\]\n\\[E(X) = E(X_1 + X_2 + ... + X_n) = E(X_1) + E(X_2) + ... + E(X_n)\\]\n\\[E(X) = p + p + ... + p = n \\cdot p\\]\n\n\nVarijansa\n\\[Var(X) = n \\cdot p \\cdot (1-p)\\]\nDokaz (za nezavisne \\(X_i\\)):\n\\[Var(X) = Var(X_1) + Var(X_2) + ... + Var(X_n)\\]\n\\[Var(X) = p(1-p) + p(1-p) + ... + p(1-p) = n \\cdot p(1-p)\\]\n\n\nStandardna devijacija\n\\[\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}\\]\n\n\nPrimer: Test sa 20 pitanja\nStudent pogađa odgovore na testu sa 20 pitanja (4 ponuđena, 1 tačan).\n\nn = 20\np = 0.25\nE(X) = 20 × 0.25 = 5 tačnih odgovora\nσ = √(20 × 0.25 × 0.75) = √3.75 ≈ 1.94\n\nInterpretacija: Student može očekivati oko 5 tačnih odgovora, sa tipičnim odstupanjem od oko 2 odgovora.",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#svojstva-binomne-raspodjele",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#svojstva-binomne-raspodjele",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
+    "section": "5. Svojstva binomne raspodjele",
+    "text": "5. Svojstva binomne raspodjele\n\n1. Simetrija\nBinomna raspodjela je simetrična ako i samo ako p = 0.5.\n\nZa p &lt; 0.5: raspodjela je pomerena ulevo (desno asimetrična)\nZa p &gt; 0.5: raspodjela je pomerena udesno (levo asimetrična)\nZa p = 0.5: raspodjela je simetrična\n\n\n\n2. Mod (najčešća vrednost)\nMod binomne raspodjele (vrednost k sa maksimalnom verovatnoćom) je:\n\\[\\text{Mod} = \\lfloor (n+1)p \\rfloor\\]\ngde \\(\\lfloor x \\rfloor\\) označava najveći ceo broj ≤ x.\nPrimer: - n = 20, p = 0.25 - Mod = ⌊21 × 0.25⌋ = ⌊5.25⌋ = 5\n\n\n3. Veza sa Poissonovom raspodjelom\nKada je n veliko i p malo (retki događaji), binomna raspodjela se približava Poissonovoj raspodjeli sa parametrom λ = np.\n\n\n4. Veza sa normalnom raspodjelom\nKada je n veliko, binomna raspodjela se približava normalnoj raspodjeli sa: - μ = np - σ² = np(1-p)\nPravilo palca: Normalna aproksimacija je dobra ako np ≥ 5 i n(1-p) ≥ 5.",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#kada-koristiti-binomnu-raspodjelu",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#kada-koristiti-binomnu-raspodjelu",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
+    "section": "6. Kada koristiti binomnu raspodjelu?",
+    "text": "6. Kada koristiti binomnu raspodjelu?\nBinomnu raspodjelu koristimo kada su ispunjeni sledeći uslovi:\n\n✓ Fiksan broj pokušaja (n) - znamo unapred koliko puta ponavljamo eksperiment\n✓ Svaki pokušaj je nezavisan - rezultat jednog pokušaja ne utiče na druge\n✓ Samo dva moguća ishoda - uspeh ili neuspeh\n✓ Konstantna verovatnoća (p) - verovatnoća uspeha je ista u svakom pokušaju\n\n\nPrimeri gde JESTE primenljiva\n\nBacanje novčića n puta (p = 0.5)\nTest sa višestrukim izborom (p = 1/broj_opcija)\nProizvodnja sa konstantnom stopom greške\nSlobodna bacanja u košarci (ako je p konstantno)\n\n\n\nPrimeri gde NIJE primenljiva\n\nIzvlačenje karata bez vraćanja - verovatnoća se menja (nije konstantno p)\nEksperiment do prvog uspeha - n nije fiksan (koristimo geometrijsku raspodjelu)\nBroj poziva u call centru - kontinuirano vreme (koristimo Poissonovu raspodjelu)",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#zadaci-za-proveru-razumevanja",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#zadaci-za-proveru-razumevanja",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
+    "section": "Zadaci za proveru razumevanja",
+    "text": "Zadaci za proveru razumevanja\n\nZadatak 1\nBernoulijeva promenljiva X ima p = 0.3. Izračunaj: a) E(X) b) Var(X) c) σ\n\n\nZadatak 2\nBacamo pravilnu kockicu. Smatramo da je uspeh dobiti broj 6. a) Kolika je verovatnoća uspeha p? b) Ako bacimo kockicu 10 puta, koja raspodjela opisuje broj šestica? c) Koliki je očekivani broj šestica?\n\n\nZadatak 3\nStudent ima 60% šanse da tačno odgovori na svako pitanje testa sa 15 pitanja. a) Napiši raspodjelu koja opisuje broj tačnih odgovora. b) Koliko tačnih odgovora može očekivati? c) Izračunaj standardnu devijaciju.\n\n\nZadatak 4\nDa li sledeći scenariji zadovoljavaju uslove za binomnu raspodjelu?\n\nIzvlačimo 5 karata iz špila od 52 karte bez vraćanja i brojimo pikove.\nBacamo novčić dok ne padne glava i brojimo broj bacanja.\nPitamo 100 studenata da li preferiraju online ili uživo nastavu.",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#rezime",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#rezime",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
+    "section": "Rezime",
+    "text": "Rezime\n\n\n\n\n\n\n\n\nPojam\nDefinicija\nFormula\n\n\n\n\nOčekivanje\nProsečna vrednost promenljive\n\\(E(X) = \\sum x_i P(X=x_i)\\)\n\n\nBernoulijev eksperiment\nEksperiment sa 2 ishoda\nX ∈ {0, 1}\n\n\nBernoulijeva raspodjela\nRaspodjela jednog pokušaja\n\\(E(X) = p\\)\n\n\nBinomna raspodjela\nn nezavisnih Bernoulijevih pokušaja\n\\(P(X=k) = \\binom{n}{k}p^k(1-p)^{n-k}\\)\n\n\nE(X) binomne\nOčekivani broj uspeha\n\\(E(X) = np\\)\n\n\nVar(X) binomne\nVarijansa binomne\n\\(Var(X) = np(1-p)\\)",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-teorija-binomne.html#sledeći-korak",
+    "href": "lekcije/lekcija-2-teorija-binomne.html#sledeći-korak",
+    "title": "Lekcija 2 — Teorijske osnove binomne raspodjele",
+    "section": "Sledeći korak",
+    "text": "Sledeći korak\nSada kada razumete teorijske osnove, možete preći na praktičnu vizualizaciju u Origin-u gde ćete: - Računati binomne verovatnoće - Kreirati grafikone raspodjela - Analizirati uticaj parametara n i p",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Teorijske osnove binomne raspodjele"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-vizualizacija.html",
+    "href": "lekcije/lekcija-2-vizualizacija.html",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
+    "section": "",
+    "text": "Pre nego što počnete sa ovom lekcijom, obavezno pročitajte teorijske osnove:\n👉 Lekcija 2 - Teorijske osnove binomne raspodjele",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-vizualizacija.html#preduslovi",
+    "href": "lekcije/lekcija-2-vizualizacija.html#preduslovi",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
+    "section": "",
+    "text": "Pre nego što počnete sa ovom lekcijom, obavezno pročitajte teorijske osnove:\n👉 Lekcija 2 - Teorijske osnove binomne raspodjele",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-vizualizacija.html#tema",
+    "href": "lekcije/lekcija-2-vizualizacija.html#tema",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
+    "section": "Tema",
+    "text": "Tema\nPraktična vizualizacija binomne raspodjele korišćenjem Origin softvera",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-vizualizacija.html#kratak-podsetnik",
+    "href": "lekcije/lekcija-2-vizualizacija.html#kratak-podsetnik",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
+    "section": "Kratak podsetnik",
+    "text": "Kratak podsetnik\nBinomna raspodjela opisuje broj uspeha u nizu od n nezavisnih Bernoulijevih eksperimenata, gde svaki eksperiment ima verovatnoću uspeha p.\nVerovatnoća tačno k uspeha u n pokušaja je:\n\\[P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}\\]\ngde je: - n = broj pokušaja - p = verovatnoća uspeha u jednom pokušaju - k = broj uspeha (0, 1, 2, …, n) - E(X) = n·p (očekivana vrednost) - σ = √(n·p·(1-p)) (standardna devijacija)",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-2-vizualizacija.html#zadatak-1-bacanje-novčića",
+    "href": "lekcije/lekcija-2-vizualizacija.html#zadatak-1-bacanje-novčića",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
     "section": "Zadatak 1: Bacanje novčića",
     "text": "Zadatak 1: Bacanje novčića\n\nScenario\nBacamo pravilni novčić 10 puta. Kolika je verovatnoća da dobijemo tačno k glava?\n\n\nParametri\n\nn = 10 (broj bacanja)\np = 0.5 (verovatnoća glave)\n\n\n\nUputstvo\n\nKorak 1: Kreiranje tabele\n\nU Origin-u kreiraj novu tabelu (Worksheet).\nKreiraj kolone: k, n, p, P(X=k)\n\n\n\nKorak 2: Unos podataka\n\nU kolonu k unesi vrednosti od 0 do 10 (broj glava).\nU kolonu n unesi vrednost 10 za sve redove (može se koristiti Fill Column).\nU kolonu p unesi vrednost 0.5 za sve redove.\n\n\n\nKorak 3: Računanje verovatnoće\n\nKlikni na kolonu P(X=k) i selektuj Set Column Values.\nUnesi formulu za binomnu verovatnoću:\nBinomp(n, p, k)\nAlternativno, možeš koristiti:\ncomb(n, k) * p^k * (1-p)^(n-k)\nKlikni Apply da izračunaš sve verovatnoće.\n\n\n\nKorak 4: Definisanje kolona\n\nKolonu k definiši kao X (broj glava).\nKolonu P(X=k) definiši kao Y (verovatnoća).\n\n\n\nKorak 5: Kreiranje grafa\n\nSelektuj kolone k i P(X=k).\nKreiraj Column graf (stubičasti):\n\nPlot &gt; Column/Bar &gt; Column\n\nUredi graf:\n\nOsa x: Broj glava (k)\nOsa y: Verovatnoća P(X = k)\nNaslov: Binomna raspodjela: n=10, p=0.5\nDodaj tekst na graf: μ = 5, σ = 1.58\n\nSačuvaj kao: Graf_Binomna_Novcic.pdf",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 2 — Binomna raspodjela"
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-2-binomna-raspodjela.html#zadatak-2-test-sa-višestrukim-izborom",
-    "href": "lekcije/lekcija-2-binomna-raspodjela.html#zadatak-2-test-sa-višestrukim-izborom",
-    "title": "Lekcija 2 — Binomna raspodjela",
+    "objectID": "lekcije/lekcija-2-vizualizacija.html#zadatak-2-test-sa-višestrukim-izborom",
+    "href": "lekcije/lekcija-2-vizualizacija.html#zadatak-2-test-sa-višestrukim-izborom",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
     "section": "Zadatak 2: Test sa višestrukim izborom",
     "text": "Zadatak 2: Test sa višestrukim izborom\n\nScenario\nStudent nasumično označava odgovore na testu sa 20 pitanja, gde svako pitanje ima 4 ponuđena odgovora (1 tačan). Kolika je verovatnoća da student pogodi tačno k odgovora?\n\n\nParametri\n\nn = 20 (broj pitanja)\np = 0.25 (verovatnoća pogađanja, jer je 1/4)\n\n\n\nUputstvo\n\nKorak 1: Kreiranje nove tabele\n\nKreiraj novu tabelu (dodaj Sheet2).\nKreiraj kolone: k, n, p, P(X=k)\n\n\n\nKorak 2: Unos podataka i računanje\n\nU kolonu k unesi vrednosti od 0 do 20.\nU kolonu n unesi vrednost 20 (broj pitanja).\nU kolonu p unesi vrednost 0.25 (verovatnoća = 1/4).\nU kolonu P(X=k) unesi formulu:\nBinomp(n, p, k)\n\n\n\nKorak 3: Graf\n\nSelektuj k i P(X=k).\nKreiraj Column graf.\nUredi graf:\n\nOsa x: Broj tačnih odgovora (k)\nOsa y: Verovatnoća P(X = k)\nNaslov: Test sa pogađanjem: n=20, p=0.25\nDodaj tekst: μ = 5, σ = 1.94\n\nSačuvaj kao: Graf_Binomna_Test.pdf\n\n\n\nPitanja za analizu\n\nKoja vrednost k ima najveću verovatnoću?\nDa li bi student prošao test (potrebno 10+ tačnih)?\nIzračunaj verovatnoću prolaska: P(X ≥ 10) = ?",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 2 — Binomna raspodjela"
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-2-binomna-raspodjela.html#zadatak-3-poređenje-različitih-p",
-    "href": "lekcije/lekcija-2-binomna-raspodjela.html#zadatak-3-poređenje-različitih-p",
-    "title": "Lekcija 2 — Binomna raspodjela",
+    "objectID": "lekcije/lekcija-2-vizualizacija.html#zadatak-3-poređenje-različitih-p",
+    "href": "lekcije/lekcija-2-vizualizacija.html#zadatak-3-poređenje-različitih-p",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
     "section": "Zadatak 3: Poređenje različitih p",
     "text": "Zadatak 3: Poređenje različitih p\n\nScenario\nUporedi binomne raspodjele za isti n=15, ali različite verovatnoće p. Ovo pokazuje kako parametar p utiče na oblik raspodjele.\n\n\nParametri\n\nn = 15 (fiksan broj pokušaja)\np₁ = 0.3, p₂ = 0.5, p₃ = 0.7 (tri različite verovatnoće)\n\n\n\nUputstvo\n\nKorak 1: Kreiranje tabele\n\nKreiraj novu tabelu (Sheet3).\nKreiraj kolone: k, n, P(p=0.3), P(p=0.5), P(p=0.7)\n\n\n\nKorak 2: Unos podataka\n\nU kolonu k unesi vrednosti od 0 do 15.\nU kolonu n unesi vrednost 15 za sve redove.\n\n\n\nKorak 3: Računanje verovatnoća\nZa kolonu P(p=0.3):\nBinomp(n, 0.3, k)\nZa kolonu P(p=0.5):\nBinomp(n, 0.5, k)\nZa kolonu P(p=0.7):\nBinomp(n, 0.7, k)\n\n\nKorak 4: Kreiranje grafa\n\nSelektuj k kao X kolonu.\nSelektuj sve tri kolone sa verovatnoćama kao Y kolone.\nKreiraj Grouped Column graf (Plot &gt; Column/Bar &gt; Column).\nUredi graf:\n\nOsa x: Broj uspeha (k)\nOsa y: Verovatnoća P(X = k)\nNaslov: Uticaj parametra p na binomnu raspodjelu (n=15)\nLegenda: p=0.3, p=0.5, p=0.7\nKoristi različite boje za svaku seriju\n\nSačuvaj kao: Graf_Binomna_Poredjenje.pdf\n\n\n\nPitanja za analizu\n\nKako se menja pozicija maksimuma (moda) kada p raste?\nKoja raspodjela je simetrična?\nDa li postoji povezanost između raspodjele za p=0.3 i p=0.7?",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 2 — Binomna raspodjela"
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-2-binomna-raspodjela.html#predaja",
-    "href": "lekcije/lekcija-2-binomna-raspodjela.html#predaja",
-    "title": "Lekcija 2 — Binomna raspodjela",
+    "objectID": "lekcije/lekcija-2-vizualizacija.html#predaja",
+    "href": "lekcije/lekcija-2-vizualizacija.html#predaja",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
     "section": "Predaja",
     "text": "Predaja\nZa svaki zadatak predati:\n\nZadatak 1:\n\nOrigin projekat: Lekcija2_Zadatak1_ImePrezime.opju\nGraf: Graf_Binomna_Novcic.pdf\n\nZadatak 2:\n\nOrigin projekat: Lekcija2_Zadatak2_ImePrezime.opju\nGraf: Graf_Binomna_Test.pdf\n\nZadatak 3:\n\nOrigin projekat: Lekcija2_Zadatak3_ImePrezime.opju\nGraf: Graf_Binomna_Poredjenje.pdf",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 2 — Binomna raspodjela"
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-2-binomna-raspodjela.html#kriterijumi-checklist",
-    "href": "lekcije/lekcija-2-binomna-raspodjela.html#kriterijumi-checklist",
-    "title": "Lekcija 2 — Binomna raspodjela",
+    "objectID": "lekcije/lekcija-2-vizualizacija.html#kriterijumi-checklist",
+    "href": "lekcije/lekcija-2-vizualizacija.html#kriterijumi-checklist",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
     "section": "Kriterijumi (checklist)",
     "text": "Kriterijumi (checklist)\n\nTabele imaju pravilno označene kolone (k, P(X=k))\nGrafovi su Column/Grouped Column tip\nOse su pravilno označene sa jedinicama\nNaslovi sadrže parametre n i p\nDodati su tekst sa srednjom vrednošću (μ) i standardnom devijacijom (σ)\nGrafovi su izvezeni u PDF formatu\nPredati su projekti i grafovi",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 2 — Binomna raspodjela"
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-2-binomna-raspodjela.html#dodatne-napomene",
-    "href": "lekcije/lekcija-2-binomna-raspodjela.html#dodatne-napomene",
-    "title": "Lekcija 2 — Binomna raspodjela",
+    "objectID": "lekcije/lekcija-2-vizualizacija.html#dodatne-napomene",
+    "href": "lekcije/lekcija-2-vizualizacija.html#dodatne-napomene",
+    "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
     "section": "Dodatne napomene",
     "text": "Dodatne napomene\n\nSrednja vrednost i standardna devijacija binomne raspodjele\nBinomna raspodjela ima teorijske formule za parametre:\n\nSrednja vrednost: μ = n × p\nStandardna devijacija: σ = √(n × p × (1-p))\n\n\n\nKako izračunati u Origin-u?\n\nMetod 1: Ručni izračun koristeći formule\nKreiraj dodatne kolone μ i σ i koristi Set Column Values:\nμ = n * p\nσ = sqrt(n * p * (1-p))\n\n\nMetod 2: Iz podataka (verifikacija)\n\nSelektuj kolonu P(X=k) i k.\nKoristi Statistics → Descriptive Statistics → Statistics on Columns.\nUporedi izračunate vrednosti sa teorijskim.\n\nNapomena: Teorijske formule daju tačne vrednosti za binomnu raspodjelu.\n\n\n\nPrimer za Zadatak 1\n\nn = 10, p = 0.5\nμ = 10 × 0.5 = 5\nσ = √(10 × 0.5 × 0.5) = √2.5 ≈ 1.58",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 2 — Binomna raspodjela"
+      "Lekcija 2: Binomna raspodjela",
+      "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
     ]
   },
   {
@@ -205,7 +370,31 @@
     "href": "lekcije/index.html",
     "title": "Lekcije",
     "section": "",
-    "text": "Lekcije iz Origin-a\n\nLekcija 1 — Zadatak 1 (samo uputstvo)\nLekcija 2 — Binomna raspodjela",
+    "text": "Lekcija 1 — Zadatak 1 (samo uputstvo)\n\n\n\n\n\nTeorijske osnove binomne raspodjele - Očekivanje, Bernoulijev eksperiment, Binomna raspodjela\nVizualizacija u Origin-u - Praktični zadaci i grafici",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcije"
+    ]
+  },
+  {
+    "objectID": "lekcije/index.html#lekcija-1-osnove-origin-a",
+    "href": "lekcije/index.html#lekcija-1-osnove-origin-a",
+    "title": "Lekcije",
+    "section": "",
+    "text": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcije"
+    ]
+  },
+  {
+    "objectID": "lekcije/index.html#lekcija-2-binomna-raspodjela",
+    "href": "lekcije/index.html#lekcija-2-binomna-raspodjela",
+    "title": "Lekcije",
+    "section": "",
+    "text": "Teorijske osnove binomne raspodjele - Očekivanje, Bernoulijev eksperiment, Binomna raspodjela\nVizualizacija u Origin-u - Praktični zadaci i grafici",
     "crumbs": [
       "Početna",
       "Lekcije",

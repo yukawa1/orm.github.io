@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://yukawa1.github.io/orm.github.io/index.html</loc>
-    <lastmod>2026-04-07T10:50:08.068Z</lastmod>
+    <lastmod>2026-04-07T16:22:51.721Z</lastmod>
   </url>
   <url>
-    <loc>https://yukawa1.github.io/orm.github.io/lekcije/lekcija-2-binomna-raspodjela.html</loc>
-    <lastmod>2026-04-07T10:50:08.068Z</lastmod>
+    <loc>https://yukawa1.github.io/orm.github.io/lekcije/lekcija-2-teorija-binomne.html</loc>
+    <lastmod>2026-04-07T16:21:59.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yukawa1.github.io/orm.github.io/lekcije/lekcija-2-vizualizacija.html</loc>
+    <lastmod>2026-04-07T16:22:43.265Z</lastmod>
   </url>
   <url>
     <loc>https://yukawa1.github.io/orm.github.io/lekcije/lekcija-1-zadatak-1.html</loc>
@@ -14,6 +18,6 @@
   </url>
   <url>
     <loc>https://yukawa1.github.io/orm.github.io/lekcije/index.html</loc>
-    <lastmod>2026-04-07T10:50:08.068Z</lastmod>
+    <lastmod>2026-04-07T16:23:01.248Z</lastmod>
   </url>
 </urlset>
