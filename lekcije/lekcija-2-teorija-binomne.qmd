@@ -1,0 +1,346 @@
+---
+title: "Lekcija 2 — Teorijske osnove binomne raspodjele"
+---
+
+## Uvod
+
+Pre nego što vizualizujemo binomnu raspodjelu u Origin-u, potrebno je razumeti teorijske koncepte koji stoje iza nje. Ova lekcija pokriva osnovne pojmove teorije verovatnoće.
+
+---
+
+## 1. Očekivanje (Srednja vrednost)
+
+### Definicija
+
+**Očekivanje** (ili **srednja vrednost**, označava se sa **E(X)** ili **μ**) je prosečna vrednost koju slučajna promenljiva X uzima u velikom broju ponavljanja eksperimenta.
+
+Za diskretnu slučajnu promenljivu X:
+
+$$E(X) = \sum_{i} x_i \cdot P(X = x_i)$$
+
+gde je:
+- $x_i$ - moguće vrednosti koje X može uzeti
+- $P(X = x_i)$ - verovatnoća da X uzme vrednost $x_i$
+
+### Intuitivno objašnjenje
+
+Očekivanje je **"balansna tačka"** raspodjele. Ako biste veliki broj puta ponovili eksperiment i uzeli prosek svih rezultata, dobili biste očekivanje.
+
+### Primer 1: Bacanje kockice
+
+Bacamo pravilnu kockicu. Koja je srednja vrednost?
+
+Moguće vrednosti: 1, 2, 3, 4, 5, 6 (svaka sa verovatnoćom 1/6)
+
+$$E(X) = 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + 3 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6} + 5 \cdot \frac{1}{6} + 6 \cdot \frac{1}{6}$$
+
+$$E(X) = \frac{1+2+3+4+5+6}{6} = \frac{21}{6} = 3.5$$
+
+**Zaključak:** Iako kockica nikada ne pokaže 3.5, to je prosečan rezultat u velikom broju bacanja.
+
+### Primer 2: Novčani dobitak
+
+Igra: Bacamo novčić. Ako padne **glava**, dobijate **100 din**. Ako padne **pismo**, gubite **50 din**.
+
+$$E(X) = 100 \cdot 0.5 + (-50) \cdot 0.5 = 50 - 25 = 25 \text{ din}$$
+
+**Zaključak:** U proseku dobijate 25 dinara po igri.
+
+### Svojstva očekivanja
+
+1. **Linearnost:**
+   $$E(aX + b) = a \cdot E(X) + b$$
+
+2. **Aditivnost:**
+   $$E(X + Y) = E(X) + E(Y)$$
+
+   (ovo važi **čak i ako X i Y nisu nezavisni**!)
+
+---
+
+## 2. Bernoulijev eksperiment
+
+### Definicija
+
+**Bernoulijev eksperiment** (ili **Bernoulijev ogled**) je najjednostavniji slučajan eksperiment koji ima **samo dva moguća ishoda**:
+
+- **Uspeh** (S - success) sa verovatnoćom **p**
+- **Neuspeh** (F - failure) sa verovatnoćom **q = 1-p**
+
+### Bernoulijeva slučajna promenljiva
+
+Označavamo ishode numerički:
+
+$$X = \begin{cases}
+1 & \text{ako je uspeh (sa verovatnoćom } p\text{)} \\
+0 & \text{ako je neuspeh (sa verovatnoćom } 1-p\text{)}
+\end{cases}$$
+
+**Raspodjela verovatnoća:**
+
+| X | P(X) |
+|--:|-----:|
+| 0 | 1-p  |
+| 1 |  p   |
+
+### Primeri Bernoulijevih eksperimenata
+
+#### Primer 1: Bacanje novčića
+- **Uspeh:** Glava (p = 0.5)
+- **Neuspeh:** Pismo (1-p = 0.5)
+
+#### Primer 2: Jedan odgovor na testu
+- **Uspeh:** Tačan odgovor (p = 0.25 za 4 ponuđena)
+- **Neuspeh:** Pogrešan odgovor (1-p = 0.75)
+
+#### Primer 3: Kontrola kvaliteta
+- **Uspeh:** Ispravan proizvod (p = 0.98)
+- **Neuspeh:** Neispravan proizvod (1-p = 0.02)
+
+#### Primer 4: Slobodno bacanje u košarci
+- **Uspeh:** Koš (p = 0.75 za dobrog igrača)
+- **Neuspeh:** Promašaj (1-p = 0.25)
+
+### Parametri Bernoulijeve raspodjele
+
+**Očekivanje:**
+$$E(X) = 0 \cdot (1-p) + 1 \cdot p = p$$
+
+**Varijansa:**
+$$Var(X) = E(X^2) - [E(X)]^2 = p - p^2 = p(1-p)$$
+
+**Standardna devijacija:**
+$$\sigma = \sqrt{p(1-p)}$$
+
+### Primer izračunavanja
+
+Za bacanje novčića (p = 0.5):
+- E(X) = 0.5
+- Var(X) = 0.5 × 0.5 = 0.25
+- σ = 0.5
+
+---
+
+## 3. Binomna raspodjela
+
+### Definicija
+
+**Binomna raspodjela** opisuje broj uspeha u nizu od **n nezavisnih Bernoulijevih eksperimenata** sa istom verovatnoćom uspeha **p**.
+
+Slučajna promenljiva **X** predstavlja **ukupan broj uspeha** u n pokušaja:
+
+$$X = X_1 + X_2 + X_3 + ... + X_n$$
+
+gde je svaki $X_i$ Bernoulijeva promenljiva sa parametrom p.
+
+### Notacija
+
+$$X \sim \text{Binomial}(n, p)$$
+
+ili
+
+$$X \sim B(n, p)$$
+
+### Formula za verovatnoću
+
+Verovatnoća da dobijemo **tačno k uspeha** u **n pokušaja** je:
+
+$$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, 2, ..., n$$
+
+gde je:
+
+$$\binom{n}{k} = \frac{n!}{k! \cdot (n-k)!}$$
+
+**binomni koeficijent** koji predstavlja broj načina da se izabere k elemenata iz n elemenata.
+
+### Objašnjenje formule
+
+Formula se sastoji iz **tri dela**:
+
+1. **$\binom{n}{k}$** - na koliko načina možemo dobiti k uspeha u n pokušaja
+2. **$p^k$** - verovatnoća k uspeha
+3. **$(1-p)^{n-k}$** - verovatnoća (n-k) neuspeha
+
+### Primer: Bacanje novčića 3 puta
+
+Bacamo novčić 3 puta. Kolika je verovatnoća da dobijemo **tačno 2 glave**?
+
+- n = 3 (broj bacanja)
+- p = 0.5 (verovatnoća glave)
+- k = 2 (želimo 2 glave)
+
+$$P(X = 2) = \binom{3}{2} (0.5)^2 (0.5)^{3-2}$$
+
+$$P(X = 2) = 3 \cdot 0.25 \cdot 0.5 = 3 \cdot 0.125 = 0.375$$
+
+**Provera:** Možemo dobiti 2 glave na **3 načina**:
+- GGP (glava, glava, pismo)
+- GPG (glava, pismo, glava)
+- PGG (pismo, glava, glava)
+
+Svaki ishod ima verovatnoću: $0.5 \times 0.5 \times 0.5 = 0.125$
+
+Ukupno: $3 \times 0.125 = 0.375$ ✓
+
+### Kompletna raspodjela: Bacanje novčića 3 puta
+
+| k | Ishodi | $\binom{3}{k}$ | $p^k(1-p)^{3-k}$ | P(X=k) |
+|--:|--------|---------------:|-----------------:|-------:|
+| 0 | PPP    | 1              | 0.125            | 0.125  |
+| 1 | GPP, PGP, PPG | 3       | 0.125            | 0.375  |
+| 2 | GGP, GPG, PGG | 3       | 0.125            | 0.375  |
+| 3 | GGG    | 1              | 0.125            | 0.125  |
+
+**Suma:** 0.125 + 0.375 + 0.375 + 0.125 = **1.000** ✓
+
+---
+
+## 4. Parametri binomne raspodjele
+
+### Očekivanje (Srednja vrednost)
+
+$$E(X) = n \cdot p$$
+
+**Dokaz (koristeći linearnost):**
+
+$$X = X_1 + X_2 + ... + X_n$$
+
+$$E(X) = E(X_1 + X_2 + ... + X_n) = E(X_1) + E(X_2) + ... + E(X_n)$$
+
+$$E(X) = p + p + ... + p = n \cdot p$$
+
+### Varijansa
+
+$$Var(X) = n \cdot p \cdot (1-p)$$
+
+**Dokaz (za nezavisne $X_i$):**
+
+$$Var(X) = Var(X_1) + Var(X_2) + ... + Var(X_n)$$
+
+$$Var(X) = p(1-p) + p(1-p) + ... + p(1-p) = n \cdot p(1-p)$$
+
+### Standardna devijacija
+
+$$\sigma = \sqrt{n \cdot p \cdot (1-p)}$$
+
+### Primer: Test sa 20 pitanja
+
+Student pogađa odgovore na testu sa 20 pitanja (4 ponuđena, 1 tačan).
+
+- n = 20
+- p = 0.25
+- E(X) = 20 × 0.25 = **5 tačnih odgovora**
+- σ = √(20 × 0.25 × 0.75) = √3.75 ≈ **1.94**
+
+**Interpretacija:** Student može očekivati oko 5 tačnih odgovora, sa tipičnim odstupanjem od oko 2 odgovora.
+
+---
+
+## 5. Svojstva binomne raspodjele
+
+### 1. Simetrija
+
+Binomna raspodjela je **simetrična** ako i samo ako **p = 0.5**.
+
+- Za **p < 0.5**: raspodjela je **pomerena ulevo** (desno asimetrična)
+- Za **p > 0.5**: raspodjela je **pomerena udesno** (levo asimetrična)
+- Za **p = 0.5**: raspodjela je **simetrična**
+
+### 2. Mod (najčešća vrednost)
+
+**Mod** binomne raspodjele (vrednost k sa maksimalnom verovatnoćom) je:
+
+$$\text{Mod} = \lfloor (n+1)p \rfloor$$
+
+gde $\lfloor x \rfloor$ označava najveći ceo broj ≤ x.
+
+**Primer:**
+- n = 20, p = 0.25
+- Mod = ⌊21 × 0.25⌋ = ⌊5.25⌋ = **5**
+
+### 3. Veza sa Poissonovom raspodjelom
+
+Kada je **n veliko** i **p malo** (retki događaji), binomna raspodjela se približava **Poissonovoj raspodjeli** sa parametrom λ = np.
+
+### 4. Veza sa normalnom raspodjelom
+
+Kada je **n veliko**, binomna raspodjela se približava **normalnoj raspodjeli** sa:
+- μ = np
+- σ² = np(1-p)
+
+**Pravilo palca:** Normalna aproksimacija je dobra ako **np ≥ 5** i **n(1-p) ≥ 5**.
+
+---
+
+## 6. Kada koristiti binomnu raspodjelu?
+
+Binomnu raspodjelu koristimo kada su ispunjeni sledeći uslovi:
+
+1. ✓ **Fiksan broj pokušaja (n)** - znamo unapred koliko puta ponavljamo eksperiment
+2. ✓ **Svaki pokušaj je nezavisan** - rezultat jednog pokušaja ne utiče na druge
+3. ✓ **Samo dva moguća ishoda** - uspeh ili neuspeh
+4. ✓ **Konstantna verovatnoća (p)** - verovatnoća uspeha je ista u svakom pokušaju
+
+### Primeri gde JESTE primenljiva
+
+- Bacanje novčića n puta (p = 0.5)
+- Test sa višestrukim izborom (p = 1/broj_opcija)
+- Proizvodnja sa konstantnom stopom greške
+- Slobodna bacanja u košarci (ako je p konstantno)
+
+### Primeri gde NIJE primenljiva
+
+- **Izvlačenje karata bez vraćanja** - verovatnoća se menja (nije konstantno p)
+- **Eksperiment do prvog uspeha** - n nije fiksan (koristimo geometrijsku raspodjelu)
+- **Broj poziva u call centru** - kontinuirano vreme (koristimo Poissonovu raspodjelu)
+
+---
+
+## Zadaci za proveru razumevanja
+
+### Zadatak 1
+Bernoulijeva promenljiva X ima p = 0.3. Izračunaj:
+a) E(X)
+b) Var(X)
+c) σ
+
+### Zadatak 2
+Bacamo pravilnu kockicu. Smatramo da je **uspeh** dobiti broj 6.
+a) Kolika je verovatnoća uspeha p?
+b) Ako bacimo kockicu 10 puta, koja raspodjela opisuje broj šestica?
+c) Koliki je očekivani broj šestica?
+
+### Zadatak 3
+Student ima 60% šanse da tačno odgovori na svako pitanje testa sa 15 pitanja.
+a) Napiši raspodjelu koja opisuje broj tačnih odgovora.
+b) Koliko tačnih odgovora može očekivati?
+c) Izračunaj standardnu devijaciju.
+
+### Zadatak 4
+Da li sledeći scenariji zadovoljavaju uslove za binomnu raspodjelu?
+
+a) Izvlačimo 5 karata iz špila od 52 karte bez vraćanja i brojimo pikove.
+b) Bacamo novčić dok ne padne glava i brojimo broj bacanja.
+c) Pitamo 100 studenata da li preferiraju online ili uživo nastavu.
+
+---
+
+## Rezime
+
+| Pojam | Definicija | Formula |
+|-------|-----------|---------|
+| **Očekivanje** | Prosečna vrednost promenljive | $E(X) = \sum x_i P(X=x_i)$ |
+| **Bernoulijev eksperiment** | Eksperiment sa 2 ishoda | X ∈ {0, 1} |
+| **Bernoulijeva raspodjela** | Raspodjela jednog pokušaja | $E(X) = p$ |
+| **Binomna raspodjela** | n nezavisnih Bernoulijevih pokušaja | $P(X=k) = \binom{n}{k}p^k(1-p)^{n-k}$ |
+| **E(X) binomne** | Očekivani broj uspeha | $E(X) = np$ |
+| **Var(X) binomne** | Varijansa binomne | $Var(X) = np(1-p)$ |
+
+---
+
+## Sledeći korak
+
+Sada kada razumete teorijske osnove, možete preći na **[praktičnu vizualizaciju u Origin-u](lekcija-2-vizualizacija.qmd)** gde ćete:
+- Računati binomne verovatnoće
+- Kreirati grafikone raspodjela
+- Analizirati uticaj parametara n i p

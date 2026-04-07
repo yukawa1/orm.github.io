@@ -4,5 +4,9 @@ title: "Lekcije"
 
 # Lekcije iz Origin-a
 
+## Lekcija 1: Osnove Origin-a
 1. [Lekcija 1 — Zadatak 1 (samo uputstvo)](lekcija-1-zadatak-1.qmd)
-2. [Lekcija 2 — Binomna raspodjela](lekcija-2-binomna-raspodjela.qmd)
+
+## Lekcija 2: Binomna raspodjela
+1. [Teorijske osnove binomne raspodjele](lekcija-2-teorija-binomne.qmd) - Očekivanje, Bernoulijev eksperiment, Binomna raspodjela
+2. [Vizualizacija u Origin-u](lekcija-2-vizualizacija.qmd) - Praktični zadaci i grafici

@@ -1,14 +1,20 @@
 ---
-title: "Lekcija 2 — Binomna raspodjela"
+title: "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
 ---
+
+## Preduslovi
+
+Pre nego što počnete sa ovom lekcijom, **obavezno pročitajte teorijske osnove**:
+
+👉 **[Lekcija 2 - Teorijske osnove binomne raspodjele](lekcija-2-teorija-binomne.qmd)**
 
 ## Tema
 
-**Vizualizacija binomne raspodjele i analiza verovatnoće**
+**Praktična vizualizacija binomne raspodjele korišćenjem Origin softvera**
 
-## Teorijski uvod
+## Kratak podsetnik
 
-Binomna raspodjela opisuje broj uspeha u nizu od **n** nezavisnih eksperimenata, gde svaki eksperiment ima verovatnoću uspeha **p**.
+Binomna raspodjela opisuje broj uspeha u nizu od **n** nezavisnih Bernoulijevih eksperimenata, gde svaki eksperiment ima verovatnoću uspeha **p**.
 
 Verovatnoća tačno **k** uspeha u **n** pokušaja je:
 
@@ -18,6 +24,8 @@ gde je:
 - **n** = broj pokušaja
 - **p** = verovatnoća uspeha u jednom pokušaju
 - **k** = broj uspeha (0, 1, 2, ..., n)
+- **E(X) = n·p** (očekivana vrednost)
+- **σ = √(n·p·(1-p))** (standardna devijacija)
 
 ## Zadatak 1: Bacanje novčića
 
