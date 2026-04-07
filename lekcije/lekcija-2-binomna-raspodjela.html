@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lekcija 1 — Zadatak 1 (samo uputstvo) – Lekcije iz Origin softverskog paketa</title>
+<title>Lekcija 2 — Binomna raspodjela – Lekcije iz Origin softverskog paketa</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -109,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lekcije/index.html">Lekcije</a></li><li class="breadcrumb-item"><a href="../lekcije/lekcija-1-zadatak-1.html">Lekcija 1 — Zadatak 1 (samo uputstvo)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lekcije/index.html">Lekcije</a></li><li class="breadcrumb-item"><a href="../lekcije/lekcija-2-binomna-raspodjela.html">Lekcija 2 — Binomna raspodjela</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -146,13 +175,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lekcije/lekcija-1-zadatak-1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lekcije/lekcija-1-zadatak-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lekcija 1 — Zadatak 1 (samo uputstvo)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lekcije/lekcija-2-binomna-raspodjela.html" class="sidebar-item-text sidebar-link">
+  <a href="../lekcije/lekcija-2-binomna-raspodjela.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lekcija 2 — Binomna raspodjela</span></a>
   </div>
 </li>
@@ -169,19 +198,42 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#tema" id="toc-tema" class="nav-link active" data-scroll-target="#tema">Tema</a></li>
-  <li><a href="#podaci-unesiimportuj-u-tabelu" id="toc-podaci-unesiimportuj-u-tabelu" class="nav-link" data-scroll-target="#podaci-unesiimportuj-u-tabelu">Podaci (unesi/importuj u tabelu)</a></li>
-  <li><a href="#šta-treba-uraditi" id="toc-šta-treba-uraditi" class="nav-link" data-scroll-target="#šta-treba-uraditi">Šta treba uraditi</a></li>
+  <li><a href="#teorijski-uvod" id="toc-teorijski-uvod" class="nav-link" data-scroll-target="#teorijski-uvod">Teorijski uvod</a></li>
+  <li><a href="#zadatak-1-bacanje-novčića" id="toc-zadatak-1-bacanje-novčića" class="nav-link" data-scroll-target="#zadatak-1-bacanje-novčića">Zadatak 1: Bacanje novčića</a>
+  <ul class="collapse">
+  <li><a href="#scenario" id="toc-scenario" class="nav-link" data-scroll-target="#scenario">Scenario</a></li>
+  <li><a href="#parametri" id="toc-parametri" class="nav-link" data-scroll-target="#parametri">Parametri</a></li>
+  <li><a href="#uputstvo" id="toc-uputstvo" class="nav-link" data-scroll-target="#uputstvo">Uputstvo</a></li>
+  </ul></li>
+  <li><a href="#zadatak-2-test-sa-višestrukim-izborom" id="toc-zadatak-2-test-sa-višestrukim-izborom" class="nav-link" data-scroll-target="#zadatak-2-test-sa-višestrukim-izborom">Zadatak 2: Test sa višestrukim izborom</a>
+  <ul class="collapse">
+  <li><a href="#scenario-1" id="toc-scenario-1" class="nav-link" data-scroll-target="#scenario-1">Scenario</a></li>
+  <li><a href="#parametri-1" id="toc-parametri-1" class="nav-link" data-scroll-target="#parametri-1">Parametri</a></li>
+  <li><a href="#uputstvo-1" id="toc-uputstvo-1" class="nav-link" data-scroll-target="#uputstvo-1">Uputstvo</a></li>
+  </ul></li>
+  <li><a href="#zadatak-3-poređenje-različitih-p" id="toc-zadatak-3-poređenje-različitih-p" class="nav-link" data-scroll-target="#zadatak-3-poređenje-različitih-p">Zadatak 3: Poređenje različitih p</a>
+  <ul class="collapse">
+  <li><a href="#scenario-2" id="toc-scenario-2" class="nav-link" data-scroll-target="#scenario-2">Scenario</a></li>
+  <li><a href="#parametri-2" id="toc-parametri-2" class="nav-link" data-scroll-target="#parametri-2">Parametri</a></li>
+  <li><a href="#uputstvo-2" id="toc-uputstvo-2" class="nav-link" data-scroll-target="#uputstvo-2">Uputstvo</a></li>
+  </ul></li>
   <li><a href="#predaja" id="toc-predaja" class="nav-link" data-scroll-target="#predaja">Predaja</a></li>
   <li><a href="#kriterijumi-checklist" id="toc-kriterijumi-checklist" class="nav-link" data-scroll-target="#kriterijumi-checklist">Kriterijumi (checklist)</a></li>
+  <li><a href="#dodatne-napomene" id="toc-dodatne-napomene" class="nav-link" data-scroll-target="#dodatne-napomene">Dodatne napomene</a>
+  <ul class="collapse">
+  <li><a href="#srednja-vrednost-i-standardna-devijacija-binomne-raspodjele" id="toc-srednja-vrednost-i-standardna-devijacija-binomne-raspodjele" class="nav-link" data-scroll-target="#srednja-vrednost-i-standardna-devijacija-binomne-raspodjele">Srednja vrednost i standardna devijacija binomne raspodjele</a></li>
+  <li><a href="#kako-izračunati-u-origin-u" id="toc-kako-izračunati-u-origin-u" class="nav-link" data-scroll-target="#kako-izračunati-u-origin-u">Kako izračunati u Origin-u?</a></li>
+  <li><a href="#primer-za-zadatak-1" id="toc-primer-za-zadatak-1" class="nav-link" data-scroll-target="#primer-za-zadatak-1">Primer za Zadatak 1</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lekcije/index.html">Lekcije</a></li><li class="breadcrumb-item"><a href="../lekcije/lekcija-1-zadatak-1.html">Lekcija 1 — Zadatak 1 (samo uputstvo)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lekcije/index.html">Lekcije</a></li><li class="breadcrumb-item"><a href="../lekcije/lekcija-2-binomna-raspodjela.html">Lekcija 2 — Binomna raspodjela</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lekcija 1 — Zadatak 1 (samo uputstvo)</h1>
+<h1 class="title">Lekcija 2 — Binomna raspodjela</h1>
 </div>
 
 
@@ -200,101 +252,279 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="tema" class="level2">
 <h2 class="anchored" data-anchor-id="tema">Tema</h2>
-<p><strong>Slobodni pad — obrada podataka i prvi graf sa greškama u Origin-u</strong></p>
+<p><strong>Vizualizacija binomne raspodjele i analiza verovatnoće</strong></p>
 </section>
-<section id="podaci-unesiimportuj-u-tabelu" class="level2">
-<h2 class="anchored" data-anchor-id="podaci-unesiimportuj-u-tabelu">Podaci (unesi/importuj u tabelu)</h2>
-<p>Kolone moraju biti: <strong>t</strong>, <strong>x</strong>, <strong>σx</strong> (sa jedinicama).</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;">t (s)</th>
-<th style="text-align: right;">x (m)</th>
-<th style="text-align: right;">σx (m)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.005</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">0.10</td>
-<td style="text-align: right;">0.049</td>
-<td style="text-align: right;">0.005</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">0.20</td>
-<td style="text-align: right;">0.196</td>
-<td style="text-align: right;">0.005</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">0.30</td>
-<td style="text-align: right;">0.441</td>
-<td style="text-align: right;">0.005</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">0.40</td>
-<td style="text-align: right;">0.784</td>
-<td style="text-align: right;">0.005</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">0.50</td>
-<td style="text-align: right;">1.225</td>
-<td style="text-align: right;">0.005</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">0.60</td>
-<td style="text-align: right;">1.764</td>
-<td style="text-align: right;">0.005</td>
-</tr>
-</tbody>
-</table>
+<section id="teorijski-uvod" class="level2">
+<h2 class="anchored" data-anchor-id="teorijski-uvod">Teorijski uvod</h2>
+<p>Binomna raspodjela opisuje broj uspeha u nizu od <strong>n</strong> nezavisnih eksperimenata, gde svaki eksperiment ima verovatnoću uspeha <strong>p</strong>.</p>
+<p>Verovatnoća tačno <strong>k</strong> uspeha u <strong>n</strong> pokušaja je:</p>
+<p><span class="math display">\[P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}\]</span></p>
+<p>gde je: - <strong>n</strong> = broj pokušaja - <strong>p</strong> = verovatnoća uspeha u jednom pokušaju - <strong>k</strong> = broj uspeha (0, 1, 2, …, n)</p>
 </section>
-<section id="šta-treba-uraditi" class="level2">
-<h2 class="anchored" data-anchor-id="šta-treba-uraditi">Šta treba uraditi</h2>
+<section id="zadatak-1-bacanje-novčića" class="level2">
+<h2 class="anchored" data-anchor-id="zadatak-1-bacanje-novčića">Zadatak 1: Bacanje novčića</h2>
+<section id="scenario" class="level3">
+<h3 class="anchored" data-anchor-id="scenario">Scenario</h3>
+<p>Bacamo pravilni novčić <strong>10 puta</strong>. Kolika je verovatnoća da dobijemo tačno k glava?</p>
+</section>
+<section id="parametri" class="level3">
+<h3 class="anchored" data-anchor-id="parametri">Parametri</h3>
+<ul>
+<li>n = 10 (broj bacanja)</li>
+<li>p = 0.5 (verovatnoća glave)</li>
+</ul>
+</section>
+<section id="uputstvo" class="level3">
+<h3 class="anchored" data-anchor-id="uputstvo">Uputstvo</h3>
+<section id="korak-1-kreiranje-tabele" class="level4">
+<h4 class="anchored" data-anchor-id="korak-1-kreiranje-tabele">Korak 1: Kreiranje tabele</h4>
 <ol type="1">
-<li>Kreiraj projekat i u njega unesi/importuj podatke u jednu tabelu.</li>
-<li>Jasno definiši u tabeli:
-<ul>
-<li>nezavisnu varijablu <strong>t</strong> kao X (s),</li>
-<li>zavisnu varijablu <strong>x</strong> kao Y (m),</li>
-<li>nesigurnost <strong>σx</strong> kao grešku za Y (m).</li>
-</ul></li>
-<li>Napravi grafikon:
-<ul>
-<li><strong>scatter</strong> tačke za (x(t)),</li>
-<li>prikaži <strong>error bars</strong> koristeći σx.</li>
-</ul></li>
-<li>Uredi graf da ispunjava minimalne naučne standarde:
-<ul>
-<li>osa x: <strong>t (s)</strong></li>
-<li>osa y: <strong>x (m)</strong></li>
-<li>naslov grafa: <strong>Slobodni pad: x(t)</strong></li>
-<li>na graf dodaj tekst: <strong>σx = 0.005 m</strong></li>
-</ul></li>
-<li>Sačuvaj projekat i izvezi graf u fajl.</li>
+<li>U Origin-u kreiraj novu tabelu (Worksheet).</li>
+<li>Kreiraj kolone: <strong>k</strong>, <strong>n</strong>, <strong>p</strong>, <strong>P(X=k)</strong></li>
 </ol>
+</section>
+<section id="korak-2-unos-podataka" class="level4">
+<h4 class="anchored" data-anchor-id="korak-2-unos-podataka">Korak 2: Unos podataka</h4>
+<ol type="1">
+<li>U kolonu <strong>k</strong> unesi vrednosti od 0 do 10 (broj glava).</li>
+<li>U kolonu <strong>n</strong> unesi vrednost 10 za sve redove (može se koristiti Fill Column).</li>
+<li>U kolonu <strong>p</strong> unesi vrednost 0.5 za sve redove.</li>
+</ol>
+</section>
+<section id="korak-3-računanje-verovatnoće" class="level4">
+<h4 class="anchored" data-anchor-id="korak-3-računanje-verovatnoće">Korak 3: Računanje verovatnoće</h4>
+<ol type="1">
+<li><p>Klikni na kolonu <strong>P(X=k)</strong> i selektuj <strong>Set Column Values</strong>.</p></li>
+<li><p>Unesi formulu za binomnu verovatnoću:</p>
+<pre><code>Binomp(n, p, k)</code></pre>
+<p>Alternativno, možeš koristiti:</p>
+<pre><code>comb(n, k) * p^k * (1-p)^(n-k)</code></pre></li>
+<li><p>Klikni <strong>Apply</strong> da izračunaš sve verovatnoće.</p></li>
+</ol>
+</section>
+<section id="korak-4-definisanje-kolona" class="level4">
+<h4 class="anchored" data-anchor-id="korak-4-definisanje-kolona">Korak 4: Definisanje kolona</h4>
+<ol type="1">
+<li>Kolonu <strong>k</strong> definiši kao X (broj glava).</li>
+<li>Kolonu <strong>P(X=k)</strong> definiši kao Y (verovatnoća).</li>
+</ol>
+</section>
+<section id="korak-5-kreiranje-grafa" class="level4">
+<h4 class="anchored" data-anchor-id="korak-5-kreiranje-grafa">Korak 5: Kreiranje grafa</h4>
+<ol type="1">
+<li>Selektuj kolone <strong>k</strong> i <strong>P(X=k)</strong>.</li>
+<li>Kreiraj <strong>Column</strong> graf (stubičasti):
+<ul>
+<li>Plot &gt; Column/Bar &gt; Column</li>
+</ul></li>
+<li>Uredi graf:
+<ul>
+<li>Osa x: <strong>Broj glava (k)</strong></li>
+<li>Osa y: <strong>Verovatnoća P(X = k)</strong></li>
+<li>Naslov: <strong>Binomna raspodjela: n=10, p=0.5</strong></li>
+<li>Dodaj tekst na graf: <strong>μ = 5, σ = 1.58</strong></li>
+</ul></li>
+<li>Sačuvaj kao: <code>Graf_Binomna_Novcic.pdf</code></li>
+</ol>
+<hr>
+</section>
+</section>
+</section>
+<section id="zadatak-2-test-sa-višestrukim-izborom" class="level2">
+<h2 class="anchored" data-anchor-id="zadatak-2-test-sa-višestrukim-izborom">Zadatak 2: Test sa višestrukim izborom</h2>
+<section id="scenario-1" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-1">Scenario</h3>
+<p>Student nasumično označava odgovore na testu sa <strong>20 pitanja</strong>, gde svako pitanje ima <strong>4 ponuđena odgovora</strong> (1 tačan). Kolika je verovatnoća da student pogodi tačno k odgovora?</p>
+</section>
+<section id="parametri-1" class="level3">
+<h3 class="anchored" data-anchor-id="parametri-1">Parametri</h3>
+<ul>
+<li>n = 20 (broj pitanja)</li>
+<li>p = 0.25 (verovatnoća pogađanja, jer je 1/4)</li>
+</ul>
+</section>
+<section id="uputstvo-1" class="level3">
+<h3 class="anchored" data-anchor-id="uputstvo-1">Uputstvo</h3>
+<section id="korak-1-kreiranje-nove-tabele" class="level4">
+<h4 class="anchored" data-anchor-id="korak-1-kreiranje-nove-tabele">Korak 1: Kreiranje nove tabele</h4>
+<ol type="1">
+<li>Kreiraj novu tabelu (dodaj Sheet2).</li>
+<li>Kreiraj kolone: <strong>k</strong>, <strong>n</strong>, <strong>p</strong>, <strong>P(X=k)</strong></li>
+</ol>
+</section>
+<section id="korak-2-unos-podataka-i-računanje" class="level4">
+<h4 class="anchored" data-anchor-id="korak-2-unos-podataka-i-računanje">Korak 2: Unos podataka i računanje</h4>
+<ol type="1">
+<li><p>U kolonu <strong>k</strong> unesi vrednosti od 0 do 20.</p></li>
+<li><p>U kolonu <strong>n</strong> unesi vrednost 20 (broj pitanja).</p></li>
+<li><p>U kolonu <strong>p</strong> unesi vrednost 0.25 (verovatnoća = 1/4).</p></li>
+<li><p>U kolonu <strong>P(X=k)</strong> unesi formulu:</p>
+<pre><code>Binomp(n, p, k)</code></pre></li>
+</ol>
+</section>
+<section id="korak-3-graf" class="level4">
+<h4 class="anchored" data-anchor-id="korak-3-graf">Korak 3: Graf</h4>
+<ol type="1">
+<li>Selektuj <strong>k</strong> i <strong>P(X=k)</strong>.</li>
+<li>Kreiraj <strong>Column</strong> graf.</li>
+<li>Uredi graf:
+<ul>
+<li>Osa x: <strong>Broj tačnih odgovora (k)</strong></li>
+<li>Osa y: <strong>Verovatnoća P(X = k)</strong></li>
+<li>Naslov: <strong>Test sa pogađanjem: n=20, p=0.25</strong></li>
+<li>Dodaj tekst: <strong>μ = 5, σ = 1.94</strong></li>
+</ul></li>
+<li>Sačuvaj kao: <code>Graf_Binomna_Test.pdf</code></li>
+</ol>
+</section>
+<section id="pitanja-za-analizu" class="level4">
+<h4 class="anchored" data-anchor-id="pitanja-za-analizu">Pitanja za analizu</h4>
+<ul>
+<li>Koja vrednost k ima najveću verovatnoću?</li>
+<li>Da li bi student prošao test (potrebno 10+ tačnih)?</li>
+<li>Izračunaj verovatnoću prolaska: P(X ≥ 10) = ?</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="zadatak-3-poređenje-različitih-p" class="level2">
+<h2 class="anchored" data-anchor-id="zadatak-3-poređenje-različitih-p">Zadatak 3: Poređenje različitih p</h2>
+<section id="scenario-2" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-2">Scenario</h3>
+<p>Uporedi binomne raspodjele za isti n=15, ali različite verovatnoće p.&nbsp;Ovo pokazuje kako parametar p utiče na oblik raspodjele.</p>
+</section>
+<section id="parametri-2" class="level3">
+<h3 class="anchored" data-anchor-id="parametri-2">Parametri</h3>
+<ul>
+<li>n = 15 (fiksan broj pokušaja)</li>
+<li>p₁ = 0.3, p₂ = 0.5, p₃ = 0.7 (tri različite verovatnoće)</li>
+</ul>
+</section>
+<section id="uputstvo-2" class="level3">
+<h3 class="anchored" data-anchor-id="uputstvo-2">Uputstvo</h3>
+<section id="korak-1-kreiranje-tabele-1" class="level4">
+<h4 class="anchored" data-anchor-id="korak-1-kreiranje-tabele-1">Korak 1: Kreiranje tabele</h4>
+<ol type="1">
+<li>Kreiraj novu tabelu (Sheet3).</li>
+<li>Kreiraj kolone: <strong>k</strong>, <strong>n</strong>, <strong>P(p=0.3)</strong>, <strong>P(p=0.5)</strong>, <strong>P(p=0.7)</strong></li>
+</ol>
+</section>
+<section id="korak-2-unos-podataka-1" class="level4">
+<h4 class="anchored" data-anchor-id="korak-2-unos-podataka-1">Korak 2: Unos podataka</h4>
+<ol type="1">
+<li>U kolonu <strong>k</strong> unesi vrednosti od 0 do 15.</li>
+<li>U kolonu <strong>n</strong> unesi vrednost 15 za sve redove.</li>
+</ol>
+</section>
+<section id="korak-3-računanje-verovatnoća" class="level4">
+<h4 class="anchored" data-anchor-id="korak-3-računanje-verovatnoća">Korak 3: Računanje verovatnoća</h4>
+<p><strong>Za kolonu P(p=0.3):</strong></p>
+<pre><code>Binomp(n, 0.3, k)</code></pre>
+<p><strong>Za kolonu P(p=0.5):</strong></p>
+<pre><code>Binomp(n, 0.5, k)</code></pre>
+<p><strong>Za kolonu P(p=0.7):</strong></p>
+<pre><code>Binomp(n, 0.7, k)</code></pre>
+</section>
+<section id="korak-4-kreiranje-grafa" class="level4">
+<h4 class="anchored" data-anchor-id="korak-4-kreiranje-grafa">Korak 4: Kreiranje grafa</h4>
+<ol type="1">
+<li>Selektuj <strong>k</strong> kao X kolonu.</li>
+<li>Selektuj sve tri kolone sa verovatnoćama kao Y kolone.</li>
+<li>Kreiraj <strong>Grouped Column</strong> graf (Plot &gt; Column/Bar &gt; Column).</li>
+<li>Uredi graf:
+<ul>
+<li>Osa x: <strong>Broj uspeha (k)</strong></li>
+<li>Osa y: <strong>Verovatnoća P(X = k)</strong></li>
+<li>Naslov: <strong>Uticaj parametra p na binomnu raspodjelu (n=15)</strong></li>
+<li>Legenda: p=0.3, p=0.5, p=0.7</li>
+<li>Koristi različite boje za svaku seriju</li>
+</ul></li>
+<li>Sačuvaj kao: <code>Graf_Binomna_Poredjenje.pdf</code></li>
+</ol>
+</section>
+<section id="pitanja-za-analizu-1" class="level4">
+<h4 class="anchored" data-anchor-id="pitanja-za-analizu-1">Pitanja za analizu</h4>
+<ul>
+<li>Kako se menja pozicija maksimuma (moda) kada p raste?</li>
+<li>Koja raspodjela je simetrična?</li>
+<li>Da li postoji povezanost između raspodjele za p=0.3 i p=0.7?</li>
+</ul>
+<hr>
+</section>
+</section>
 </section>
 <section id="predaja" class="level2">
 <h2 class="anchored" data-anchor-id="predaja">Predaja</h2>
+<p>Za svaki zadatak predati:</p>
+<ol type="1">
+<li><strong>Zadatak 1</strong>:
 <ul>
-<li>Origin projekat: <code>Lekcija1_Zadatak1_ImePrezime.opju</code></li>
-<li>Izvezeni graf: <code>Graf1_SlobodniPad.pdf</code> <em>(ili PNG, 300 dpi)</em></li>
-</ul>
+<li>Origin projekat: <code>Lekcija2_Zadatak1_ImePrezime.opju</code></li>
+<li>Graf: <code>Graf_Binomna_Novcic.pdf</code></li>
+</ul></li>
+<li><strong>Zadatak 2</strong>:
+<ul>
+<li>Origin projekat: <code>Lekcija2_Zadatak2_ImePrezime.opju</code></li>
+<li>Graf: <code>Graf_Binomna_Test.pdf</code></li>
+</ul></li>
+<li><strong>Zadatak 3</strong>:
+<ul>
+<li>Origin projekat: <code>Lekcija2_Zadatak3_ImePrezime.opju</code></li>
+<li>Graf: <code>Graf_Binomna_Poredjenje.pdf</code></li>
+</ul></li>
+</ol>
 </section>
 <section id="kriterijumi-checklist" class="level2">
 <h2 class="anchored" data-anchor-id="kriterijumi-checklist">Kriterijumi (checklist)</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">tabela ima nazive kolona i jedinice (t(s), x(m), σx(m))</label></li>
-<li><label><input type="checkbox">σx je korišten kao Y-greška</label></li>
-<li><label><input type="checkbox">graf je scatter + error bars</label></li>
-<li><label><input type="checkbox">ose i naslov su pravilno označeni</label></li>
-<li><label><input type="checkbox">predati su projekat i export grafa</label></li>
+<li><label><input type="checkbox">Tabele imaju pravilno označene kolone (k, P(X=k))</label></li>
+<li><label><input type="checkbox">Grafovi su Column/Grouped Column tip</label></li>
+<li><label><input type="checkbox">Ose su pravilno označene sa jedinicama</label></li>
+<li><label><input type="checkbox">Naslovi sadrže parametre n i p</label></li>
+<li><label><input type="checkbox">Dodati su tekst sa srednjom vrednošću (μ) i standardnom devijacijom (σ)</label></li>
+<li><label><input type="checkbox">Grafovi su izvezeni u PDF formatu</label></li>
+<li><label><input type="checkbox">Predati su projekti i grafovi</label></li>
+</ul>
+</section>
+<section id="dodatne-napomene" class="level2">
+<h2 class="anchored" data-anchor-id="dodatne-napomene">Dodatne napomene</h2>
+<section id="srednja-vrednost-i-standardna-devijacija-binomne-raspodjele" class="level3">
+<h3 class="anchored" data-anchor-id="srednja-vrednost-i-standardna-devijacija-binomne-raspodjele">Srednja vrednost i standardna devijacija binomne raspodjele</h3>
+<p>Binomna raspodjela ima teorijske formule za parametre:</p>
+<ul>
+<li><strong>Srednja vrednost:</strong> μ = n × p</li>
+<li><strong>Standardna devijacija:</strong> σ = √(n × p × (1-p))</li>
+</ul>
+</section>
+<section id="kako-izračunati-u-origin-u" class="level3">
+<h3 class="anchored" data-anchor-id="kako-izračunati-u-origin-u">Kako izračunati u Origin-u?</h3>
+<section id="metod-1-ručni-izračun-koristeći-formule" class="level4">
+<h4 class="anchored" data-anchor-id="metod-1-ručni-izračun-koristeći-formule">Metod 1: Ručni izračun koristeći formule</h4>
+<p>Kreiraj dodatne kolone <strong>μ</strong> i <strong>σ</strong> i koristi Set Column Values:</p>
+<pre><code>μ = n * p
+σ = sqrt(n * p * (1-p))</code></pre>
+</section>
+<section id="metod-2-iz-podataka-verifikacija" class="level4">
+<h4 class="anchored" data-anchor-id="metod-2-iz-podataka-verifikacija">Metod 2: Iz podataka (verifikacija)</h4>
+<ol type="1">
+<li>Selektuj kolonu <strong>P(X=k)</strong> i <strong>k</strong>.</li>
+<li>Koristi Statistics → Descriptive Statistics → Statistics on Columns.</li>
+<li>Uporedi izračunate vrednosti sa teorijskim.</li>
+</ol>
+<p><strong>Napomena:</strong> Teorijske formule daju tačne vrednosti za binomnu raspodjelu.</p>
+</section>
+</section>
+<section id="primer-za-zadatak-1" class="level3">
+<h3 class="anchored" data-anchor-id="primer-za-zadatak-1">Primer za Zadatak 1</h3>
+<ul>
+<li>n = 10, p = 0.5</li>
+<li>μ = 10 × 0.5 = <strong>5</strong></li>
+<li>σ = √(10 × 0.5 × 0.5) = √2.5 ≈ <strong>1.58</strong></li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
