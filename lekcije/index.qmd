@@ -5,3 +5,4 @@ title: "Lekcije"
 # Lekcije iz Origin-a
 
 1. [Lekcija 1 — Zadatak 1 (samo uputstvo)](lekcija-1-zadatak-1.qmd)
+2. [Lekcija 2 — Binomna raspodjela](lekcija-2-binomna-raspodjela.qmd)

@@ -20,6 +20,7 @@ website:
         contents:
           - lekcije/index.qmd
           - lekcije/lekcija-1-zadatak-1.qmd
+          - lekcije/lekcija-2-binomna-raspodjela.qmd
 
 format:
   html:

@@ -1,0 +1,238 @@
+---
+title: "Lekcija 2 — Binomna raspodjela"
+---
+
+## Tema
+
+**Vizualizacija binomne raspodjele i analiza verovatnoće**
+
+## Teorijski uvod
+
+Binomna raspodjela opisuje broj uspeha u nizu od **n** nezavisnih eksperimenata, gde svaki eksperiment ima verovatnoću uspeha **p**.
+
+Verovatnoća tačno **k** uspeha u **n** pokušaja je:
+
+$$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$$
+
+gde je:
+- **n** = broj pokušaja
+- **p** = verovatnoća uspeha u jednom pokušaju
+- **k** = broj uspeha (0, 1, 2, ..., n)
+
+## Zadatak 1: Bacanje novčića
+
+### Scenario
+Bacamo pravilni novčić **10 puta**. Kolika je verovatnoća da dobijemo tačno k glava?
+
+### Parametri
+- n = 10 (broj bacanja)
+- p = 0.5 (verovatnoća glave)
+
+### Uputstvo
+
+#### Korak 1: Kreiranje tabele
+
+1. U Origin-u kreiraj novu tabelu (Worksheet).
+2. Kreiraj kolone: **k**, **n**, **p**, **P(X=k)**
+
+#### Korak 2: Unos podataka
+
+1. U kolonu **k** unesi vrednosti od 0 do 10 (broj glava).
+2. U kolonu **n** unesi vrednost 10 za sve redove (može se koristiti Fill Column).
+3. U kolonu **p** unesi vrednost 0.5 za sve redove.
+
+#### Korak 3: Računanje verovatnoće
+
+1. Klikni na kolonu **P(X=k)** i selektuj **Set Column Values**.
+2. Unesi formulu za binomnu verovatnoću:
+   ```
+   Binomp(n, p, k)
+   ```
+   Alternativno, možeš koristiti:
+   ```
+   comb(n, k) * p^k * (1-p)^(n-k)
+   ```
+3. Klikni **Apply** da izračunaš sve verovatnoće.
+
+#### Korak 4: Definisanje kolona
+
+1. Kolonu **k** definiši kao X (broj glava).
+2. Kolonu **P(X=k)** definiši kao Y (verovatnoća).
+
+#### Korak 5: Kreiranje grafa
+
+1. Selektuj kolone **k** i **P(X=k)**.
+2. Kreiraj **Column** graf (stubičasti):
+   - Plot > Column/Bar > Column
+3. Uredi graf:
+   - Osa x: **Broj glava (k)**
+   - Osa y: **Verovatnoća P(X = k)**
+   - Naslov: **Binomna raspodjela: n=10, p=0.5**
+   - Dodaj tekst na graf: **μ = 5, σ = 1.58**
+4. Sačuvaj kao: `Graf_Binomna_Novcic.pdf`
+
+---
+
+## Zadatak 2: Test sa višestrukim izborom
+
+### Scenario
+Student nasumično označava odgovore na testu sa **20 pitanja**, gde svako pitanje ima **4 ponuđena odgovora** (1 tačan). Kolika je verovatnoća da student pogodi tačno k odgovora?
+
+### Parametri
+- n = 20 (broj pitanja)
+- p = 0.25 (verovatnoća pogađanja, jer je 1/4)
+
+### Uputstvo
+
+#### Korak 1: Kreiranje nove tabele
+
+1. Kreiraj novu tabelu (dodaj Sheet2).
+2. Kreiraj kolone: **k**, **n**, **p**, **P(X=k)**
+
+#### Korak 2: Unos podataka i računanje
+
+1. U kolonu **k** unesi vrednosti od 0 do 20.
+2. U kolonu **n** unesi vrednost 20 (broj pitanja).
+3. U kolonu **p** unesi vrednost 0.25 (verovatnoća = 1/4).
+4. U kolonu **P(X=k)** unesi formulu:
+   ```
+   Binomp(n, p, k)
+   ```
+
+#### Korak 3: Graf
+
+1. Selektuj **k** i **P(X=k)**.
+2. Kreiraj **Column** graf.
+3. Uredi graf:
+   - Osa x: **Broj tačnih odgovora (k)**
+   - Osa y: **Verovatnoća P(X = k)**
+   - Naslov: **Test sa pogađanjem: n=20, p=0.25**
+   - Dodaj tekst: **μ = 5, σ = 1.94**
+4. Sačuvaj kao: `Graf_Binomna_Test.pdf`
+
+#### Pitanja za analizu
+
+- Koja vrednost k ima najveću verovatnoću?
+- Da li bi student prošao test (potrebno 10+ tačnih)?
+- Izračunaj verovatnoću prolaska: P(X ≥ 10) = ?
+
+---
+
+## Zadatak 3: Poređenje različitih p
+
+### Scenario
+Uporedi binomne raspodjele za isti n=15, ali različite verovatnoće p. Ovo pokazuje kako parametar p utiče na oblik raspodjele.
+
+### Parametri
+- n = 15 (fiksan broj pokušaja)
+- p₁ = 0.3, p₂ = 0.5, p₃ = 0.7 (tri različite verovatnoće)
+
+### Uputstvo
+
+#### Korak 1: Kreiranje tabele
+
+1. Kreiraj novu tabelu (Sheet3).
+2. Kreiraj kolone: **k**, **n**, **P(p=0.3)**, **P(p=0.5)**, **P(p=0.7)**
+
+#### Korak 2: Unos podataka
+
+1. U kolonu **k** unesi vrednosti od 0 do 15.
+2. U kolonu **n** unesi vrednost 15 za sve redove.
+
+#### Korak 3: Računanje verovatnoća
+
+**Za kolonu P(p=0.3):**
+```
+Binomp(n, 0.3, k)
+```
+
+**Za kolonu P(p=0.5):**
+```
+Binomp(n, 0.5, k)
+```
+
+**Za kolonu P(p=0.7):**
+```
+Binomp(n, 0.7, k)
+```
+
+#### Korak 4: Kreiranje grafa
+
+1. Selektuj **k** kao X kolonu.
+2. Selektuj sve tri kolone sa verovatnoćama kao Y kolone.
+3. Kreiraj **Grouped Column** graf (Plot > Column/Bar > Column).
+4. Uredi graf:
+   - Osa x: **Broj uspeha (k)**
+   - Osa y: **Verovatnoća P(X = k)**
+   - Naslov: **Uticaj parametra p na binomnu raspodjelu (n=15)**
+   - Legenda: p=0.3, p=0.5, p=0.7
+   - Koristi različite boje za svaku seriju
+5. Sačuvaj kao: `Graf_Binomna_Poredjenje.pdf`
+
+#### Pitanja za analizu
+
+- Kako se menja pozicija maksimuma (moda) kada p raste?
+- Koja raspodjela je simetrična?
+- Da li postoji povezanost između raspodjele za p=0.3 i p=0.7?
+
+---
+
+## Predaja
+
+Za svaki zadatak predati:
+
+1. **Zadatak 1**:
+   - Origin projekat: `Lekcija2_Zadatak1_ImePrezime.opju`
+   - Graf: `Graf_Binomna_Novcic.pdf`
+
+2. **Zadatak 2**:
+   - Origin projekat: `Lekcija2_Zadatak2_ImePrezime.opju`
+   - Graf: `Graf_Binomna_Test.pdf`
+
+3. **Zadatak 3**:
+   - Origin projekat: `Lekcija2_Zadatak3_ImePrezime.opju`
+   - Graf: `Graf_Binomna_Poredjenje.pdf`
+
+## Kriterijumi (checklist)
+
+- [ ] Tabele imaju pravilno označene kolone (k, P(X=k))
+- [ ] Grafovi su Column/Grouped Column tip
+- [ ] Ose su pravilno označene sa jedinicama
+- [ ] Naslovi sadrže parametre n i p
+- [ ] Dodati su tekst sa srednjom vrednošću (μ) i standardnom devijacijom (σ)
+- [ ] Grafovi su izvezeni u PDF formatu
+- [ ] Predati su projekti i grafovi
+
+## Dodatne napomene
+
+### Srednja vrednost i standardna devijacija binomne raspodjele
+
+Binomna raspodjela ima teorijske formule za parametre:
+
+- **Srednja vrednost:** μ = n × p
+- **Standardna devijacija:** σ = √(n × p × (1-p))
+
+### Kako izračunati u Origin-u?
+
+#### Metod 1: Ručni izračun koristeći formule
+
+Kreiraj dodatne kolone **μ** i **σ** i koristi Set Column Values:
+
+```
+μ = n * p
+σ = sqrt(n * p * (1-p))
+```
+
+#### Metod 2: Iz podataka (verifikacija)
+
+1. Selektuj kolonu **P(X=k)** i **k**.
+2. Koristi Statistics → Descriptive Statistics → Statistics on Columns.
+3. Uporedi izračunate vrednosti sa teorijskim.
+
+**Napomena:** Teorijske formule daju tačne vrednosti za binomnu raspodjelu.
+
+### Primer za Zadatak 1
+
+- n = 10, p = 0.5
+- μ = 10 × 0.5 = **5**
+- σ = √(10 × 0.5 × 0.5) = √2.5 ≈ **1.58**

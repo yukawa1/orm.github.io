@@ -9,6 +9,7 @@ Ovo je sajt za objavu lekcija iz **Origin** softverskog paketa.
 ## Trenutno dostupno
 
 - [Lekcija 1 — Zadatak 1 (samo uputstvo)](lekcije/lekcija-1-zadatak-1.qmd)
+- [Lekcija 2 — Binomna raspodjela](lekcije/lekcija-2-binomna-raspodjela.qmd)
 
 ## Plan
 
