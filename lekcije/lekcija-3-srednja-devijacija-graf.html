@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Početna – Lekcije iz Origin softverskog paketa</title>
+<title>Lekcija 3 — Srednja vrijednost, standardna devijacija i graf – Lekcije iz Origin softverskog paketa</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a10ef8c96895f01ac4db8923e7ca70b5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a10ef8c96895f01ac4db8923e7ca70b5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Lekcije iz Origin softverskog paketa</span>
     </a>
   </div>
@@ -91,11 +120,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Početna</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lekcije/index.html"> 
+    <a class="nav-link active" href="../lekcije/index.html" aria-current="page"> 
 <span class="menu-text">Lekcije</span></a>
   </li>  
 </ul>
@@ -109,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Početna</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lekcije/index.html">Lekcije</a></li><li class="breadcrumb-item"><a href="../lekcije/lekcija-3-srednja-devijacija-graf.html">Lekcija 3 — Srednja vrijednost, standardna devijacija i graf</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -140,13 +169,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lekcije/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../lekcije/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lekcije</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lekcije/lekcija-1-zadatak-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../lekcije/lekcija-1-zadatak-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lekcija 1 — Zadatak 1 (samo uputstvo)</span></a>
   </div>
 </li>
@@ -161,13 +190,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lekcije/lekcija-2-teorija-binomne.html" class="sidebar-item-text sidebar-link">
+  <a href="../lekcije/lekcija-2-teorija-binomne.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lekcija 2 — Teorijske osnove binomne raspodjele</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lekcije/lekcija-2-vizualizacija.html" class="sidebar-item-text sidebar-link">
+  <a href="../lekcije/lekcija-2-vizualizacija.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u</span></a>
   </div>
 </li>
@@ -175,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lekcije/lekcija-3-srednja-devijacija-graf.html" class="sidebar-item-text sidebar-link">
+  <a href="../lekcije/lekcija-3-srednja-devijacija-graf.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lekcija 3 — Srednja vrijednost, standardna devijacija i graf</span></a>
   </div>
 </li>
@@ -191,20 +220,33 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dobro-došli" id="toc-dobro-došli" class="nav-link active" data-scroll-target="#dobro-došli">Dobro došli</a>
+  <li><a href="#tema" id="toc-tema" class="nav-link active" data-scroll-target="#tema">Tema</a></li>
+  <li><a href="#cilj-lekcije" id="toc-cilj-lekcije" class="nav-link" data-scroll-target="#cilj-lekcije">Cilj lekcije</a></li>
+  <li><a href="#kratak-teorijski-podsjetnik" id="toc-kratak-teorijski-podsjetnik" class="nav-link" data-scroll-target="#kratak-teorijski-podsjetnik">Kratak teorijski podsjetnik</a></li>
+  <li><a href="#podaci" id="toc-podaci" class="nav-link" data-scroll-target="#podaci">Podaci</a></li>
+  <li><a href="#zadatak-1-izračunavanje-osnovnih-statističkih-veličina" id="toc-zadatak-1-izračunavanje-osnovnih-statističkih-veličina" class="nav-link" data-scroll-target="#zadatak-1-izračunavanje-osnovnih-statističkih-veličina">Zadatak 1: Izračunavanje osnovnih statističkih veličina</a>
   <ul class="collapse">
-  <li><a href="#trenutno-dostupno" id="toc-trenutno-dostupno" class="nav-link" data-scroll-target="#trenutno-dostupno">Trenutno dostupno</a></li>
-  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
+  <li><a href="#šta-treba-izračunati" id="toc-šta-treba-izračunati" class="nav-link" data-scroll-target="#šta-treba-izračunati">Šta treba izračunati</a></li>
+  <li><a href="#uputstvo-u-origin-u" id="toc-uputstvo-u-origin-u" class="nav-link" data-scroll-target="#uputstvo-u-origin-u">Uputstvo u Origin-u</a></li>
+  <li><a href="#kontrola-rezultata" id="toc-kontrola-rezultata" class="nav-link" data-scroll-target="#kontrola-rezultata">Kontrola rezultata</a></li>
   </ul></li>
+  <li><a href="#zadatak-2-histogram-mjerenja" id="toc-zadatak-2-histogram-mjerenja" class="nav-link" data-scroll-target="#zadatak-2-histogram-mjerenja">Zadatak 2: Histogram mjerenja</a>
+  <ul class="collapse">
+  <li><a href="#šta-treba-nacrtati" id="toc-šta-treba-nacrtati" class="nav-link" data-scroll-target="#šta-treba-nacrtati">Šta treba nacrtati</a></li>
+  <li><a href="#uputstvo-u-origin-u-1" id="toc-uputstvo-u-origin-u-1" class="nav-link" data-scroll-target="#uputstvo-u-origin-u-1">Uputstvo u Origin-u</a></li>
+  </ul></li>
+  <li><a href="#zadatak-3-kratka-analiza" id="toc-zadatak-3-kratka-analiza" class="nav-link" data-scroll-target="#zadatak-3-kratka-analiza">Zadatak 3: Kratka analiza</a></li>
+  <li><a href="#predaja" id="toc-predaja" class="nav-link" data-scroll-target="#predaja">Predaja</a></li>
+  <li><a href="#kriterijumi-checklist" id="toc-kriterijumi-checklist" class="nav-link" data-scroll-target="#kriterijumi-checklist">Kriterijumi (checklist)</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lekcije/index.html">Lekcije</a></li><li class="breadcrumb-item"><a href="../lekcije/lekcija-3-srednja-devijacija-graf.html">Lekcija 3 — Srednja vrijednost, standardna devijacija i graf</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Početna</h1>
+<h1 class="title">Lekcija 3 — Srednja vrijednost, standardna devijacija i graf</h1>
 </div>
 
 
@@ -221,24 +263,252 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="dobro-došli" class="level1">
-<h1>Dobro došli</h1>
-<p>Ovo je sajt za objavu lekcija iz <strong>Origin</strong> softverskog paketa.</p>
-<section id="trenutno-dostupno" class="level2">
-<h2 class="anchored" data-anchor-id="trenutno-dostupno">Trenutno dostupno</h2>
+<section id="tema" class="level2">
+<h2 class="anchored" data-anchor-id="tema">Tema</h2>
+<p><strong>Ponovljena mjerenja — računanje srednje vrijednosti, standardne devijacije i prikaz podataka histogramom u Origin-u</strong></p>
+</section>
+<section id="cilj-lekcije" class="level2">
+<h2 class="anchored" data-anchor-id="cilj-lekcije">Cilj lekcije</h2>
+<p>Student treba da zna:</p>
+<ol type="1">
+<li>unijeti seriju ponovljenih mjerenja u Origin,</li>
+<li>izračunati broj mjerenja, srednju vrijednost i standardnu devijaciju,</li>
+<li>nacrtati histogram mjerenja,</li>
+<li>na grafik dodati srednju vrijednost i interval srednja vrijednost ± standardna devijacija.</li>
+</ol>
+<hr>
+</section>
+<section id="kratak-teorijski-podsjetnik" class="level2">
+<h2 class="anchored" data-anchor-id="kratak-teorijski-podsjetnik">Kratak teorijski podsjetnik</h2>
+<p>Za niz mjerenja:</p>
+<p><span class="math display">\[x_1, x_2, x_3, ..., x_N\]</span></p>
+<p><strong>Srednja vrijednost</strong> je:</p>
+<p><span class="math display">\[\bar{x} = \frac{x_1 + x_2 + ... + x_N}{N} = \frac{1}{N}\sum_{i=1}^{N}x_i\]</span></p>
+<p><strong>Standardna devijacija uzorka</strong> je:</p>
+<p><span class="math display">\[s = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \bar{x})^2}{N-1}}\]</span></p>
+<p>Srednja vrijednost pokazuje oko koje vrijednosti su mjerenja grupisana. Standardna devijacija pokazuje koliko se pojedinačna mjerenja tipično razlikuju od srednje vrijednosti.</p>
+<hr>
+</section>
+<section id="podaci" class="level2">
+<h2 class="anchored" data-anchor-id="podaci">Podaci</h2>
+<p>Mjeri se period oscilovanja klatna. Svako mjerenje daje jednu vrijednost perioda <strong>T</strong>.</p>
+<p>U Origin-u napravi tabelu sa kolonama <strong>i</strong> i <strong>T</strong>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">T (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.27</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.26</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1.28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1.24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1.27</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.26</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">1.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1.29</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">1.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">1.26</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1.27</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">1.25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">1.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">1.28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">1.26</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">1.24</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="zadatak-1-izračunavanje-osnovnih-statističkih-veličina" class="level2">
+<h2 class="anchored" data-anchor-id="zadatak-1-izračunavanje-osnovnih-statističkih-veličina">Zadatak 1: Izračunavanje osnovnih statističkih veličina</h2>
+<section id="šta-treba-izračunati" class="level3">
+<h3 class="anchored" data-anchor-id="šta-treba-izračunati">Šta treba izračunati</h3>
+<p>Za kolonu <strong>T (s)</strong> izračunaj:</p>
+<ol type="1">
+<li>broj mjerenja <strong>N</strong>,</li>
+<li>srednju vrijednost <strong>T̄</strong>,</li>
+<li>standardnu devijaciju uzorka <strong>s</strong>.</li>
+</ol>
+</section>
+<section id="uputstvo-u-origin-u" class="level3">
+<h3 class="anchored" data-anchor-id="uputstvo-u-origin-u">Uputstvo u Origin-u</h3>
+<ol type="1">
+<li><p>Unesi podatke u novu tabelu.</p></li>
+<li><p>Kolonu <strong>i</strong> definiši kao X.</p></li>
+<li><p>Kolonu <strong>T</strong> definiši kao Y i dodaj jedinicu <strong>s</strong>.</p></li>
+<li><p>Selektuj kolonu <strong>T</strong>.</p></li>
+<li><p>Otvori:</p>
+<p><strong>Analysis &gt; Descriptive Statistics &gt; Statistics on Columns</strong></p></li>
+<li><p>U izvještaju prikaži najmanje:</p>
 <ul>
-<li><a href="./lekcije/lekcija-1-zadatak-1.html">Lekcija 1 — Zadatak 1 (samo uputstvo)</a></li>
-<li><a href="./lekcije/lekcija-2-teorija-binomne.html">Lekcija 2 — Teorijske osnove binomne raspodjele</a></li>
-<li><a href="./lekcije/lekcija-2-vizualizacija.html">Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u</a></li>
-<li><a href="./lekcije/lekcija-3-srednja-devijacija-graf.html">Lekcija 3 — Srednja vrijednost, standardna devijacija i graf</a></li>
+<li><strong>N</strong>,</li>
+<li><strong>Mean</strong>,</li>
+<li><strong>Standard Deviation</strong>.</li>
+</ul></li>
+<li><p>Rezultate zaokruži na tri decimale za srednju vrijednost i standardnu devijaciju.</p></li>
+</ol>
+</section>
+<section id="kontrola-rezultata" class="level3">
+<h3 class="anchored" data-anchor-id="kontrola-rezultata">Kontrola rezultata</h3>
+<p>Ako je račun urađen pravilno, približno se dobija:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Veličina</th>
+<th style="text-align: right;">Vrijednost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">N</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">T̄</td>
+<td style="text-align: right;">1.256 s</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">s</td>
+<td style="text-align: right;">0.017 s</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="zadatak-2-histogram-mjerenja" class="level2">
+<h2 class="anchored" data-anchor-id="zadatak-2-histogram-mjerenja">Zadatak 2: Histogram mjerenja</h2>
+<section id="šta-treba-nacrtati" class="level3">
+<h3 class="anchored" data-anchor-id="šta-treba-nacrtati">Šta treba nacrtati</h3>
+<p>Nacrtaj <strong>histogram</strong> vrijednosti perioda <strong>T</strong>.</p>
+<p>Histogram treba da pokaže koliko se puta pojavljuju vrijednosti perioda u određenim intervalima.</p>
+</section>
+<section id="uputstvo-u-origin-u-1" class="level3">
+<h3 class="anchored" data-anchor-id="uputstvo-u-origin-u-1">Uputstvo u Origin-u</h3>
+<ol type="1">
+<li><p>Selektuj kolonu <strong>T</strong>.</p></li>
+<li><p>Kreiraj histogram:</p>
+<p><strong>Plot &gt; Statistics &gt; Histogram</strong></p></li>
+<li><p>Uredi ose:</p>
+<ul>
+<li>osa x: <strong>Period T (s)</strong>,</li>
+<li>osa y: <strong>Učestalost</strong>.</li>
+</ul></li>
+<li><p>Naslov grafa postavi na:</p>
+<p><strong>Histogram ponovljenih mjerenja perioda klatna</strong></p></li>
+<li><p>Na graf dodaj tekst:</p>
+<p><strong>T̄ = 1.256 s, s = 0.017 s</strong></p></li>
+<li><p>Na graf dodaj tri vertikalne linije:</p>
+<ul>
+<li>kroz <strong>T̄ = 1.256 s</strong>,</li>
+<li>kroz <strong>T̄ - s = 1.239 s</strong>,</li>
+<li>kroz <strong>T̄ + s = 1.273 s</strong>.</li>
+</ul></li>
+<li><p>Liniju za srednju vrijednost prikaži punom linijom, a linije za <strong>T̄ - s</strong> i <strong>T̄ + s</strong> isprekidanim linijama.</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="zadatak-3-kratka-analiza" class="level2">
+<h2 class="anchored" data-anchor-id="zadatak-3-kratka-analiza">Zadatak 3: Kratka analiza</h2>
+<p>Odgovori u nekoliko rečenica:</p>
+<ol type="1">
+<li>Oko koje vrijednosti su mjerenja najviše grupisana?</li>
+<li>Šta znači standardna devijacija od približno <strong>0.017 s</strong> u ovom primjeru?</li>
+<li>Da li postoji mjerenje koje vidljivo odstupa od ostalih?</li>
+<li>Zašto histogram nije potpuno gladak ako imamo samo 20 mjerenja?</li>
+</ol>
+<hr>
+</section>
+<section id="predaja" class="level2">
+<h2 class="anchored" data-anchor-id="predaja">Predaja</h2>
+<p>Predati:</p>
+<ol type="1">
+<li>Origin projekat: <code>Lekcija3_SrednjaDevijacija_ImePrezime.opju</code></li>
+<li>Izvezeni graf: <code>Graf_Histogram_PeriodKlatna.pdf</code> ili PNG u rezoluciji 300 dpi</li>
+<li>Kratke odgovore na pitanja iz Zadatka 3</li>
+</ol>
+<hr>
+</section>
+<section id="kriterijumi-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="kriterijumi-checklist">Kriterijumi (checklist)</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">tabela ima pravilno označene kolone <strong>i</strong> i <strong>T (s)</strong></label></li>
+<li><label><input type="checkbox">izračunati su <strong>N</strong>, <strong>T̄</strong> i <strong>s</strong></label></li>
+<li><label><input type="checkbox">korištena je standardna devijacija uzorka</label></li>
+<li><label><input type="checkbox">nacrtan je histogram kolone <strong>T</strong></label></li>
+<li><label><input type="checkbox">ose imaju nazive i jedinice</label></li>
+<li><label><input type="checkbox">na grafu su označeni <strong>T̄</strong>, <strong>T̄ - s</strong> i <strong>T̄ + s</strong></label></li>
+<li><label><input type="checkbox">graf je izvezen u PDF ili PNG formatu</label></li>
 </ul>
-</section>
-<section id="plan" class="level2">
-<h2 class="anchored" data-anchor-id="plan">Plan</h2>
-<p>Na ovoj stranici će se objavljivati nove lekcije i zadaci.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

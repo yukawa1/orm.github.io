@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Početna",
     "section": "",
-    "text": "Ovo je sajt za objavu lekcija iz Origin softverskog paketa.\n\n\n\nLekcija 1 — Zadatak 1 (samo uputstvo)\nLekcija 2 — Teorijske osnove binomne raspodjele\nLekcija 2 — Vizualizacija binomne raspodjele u Origin-u\n\n\n\n\nNa ovoj stranici će se objavljivati nove lekcije i zadaci."
+    "text": "Ovo je sajt za objavu lekcija iz Origin softverskog paketa.\n\n\n\nLekcija 1 — Zadatak 1 (samo uputstvo)\nLekcija 2 — Teorijske osnove binomne raspodjele\nLekcija 2 — Vizualizacija binomne raspodjele u Origin-u\nLekcija 3 — Srednja vrijednost, standardna devijacija i graf\n\n\n\n\nNa ovoj stranici će se objavljivati nove lekcije i zadaci."
   },
   {
     "objectID": "index.html#trenutno-dostupno",
     "href": "index.html#trenutno-dostupno",
     "title": "Početna",
     "section": "",
-    "text": "Lekcija 1 — Zadatak 1 (samo uputstvo)\nLekcija 2 — Teorijske osnove binomne raspodjele\nLekcija 2 — Vizualizacija binomne raspodjele u Origin-u"
+    "text": "Lekcija 1 — Zadatak 1 (samo uputstvo)\nLekcija 2 — Teorijske osnove binomne raspodjele\nLekcija 2 — Vizualizacija binomne raspodjele u Origin-u\nLekcija 3 — Srednja vrijednost, standardna devijacija i graf"
   },
   {
     "objectID": "index.html#plan",
@@ -164,6 +164,78 @@
     ]
   },
   {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html",
+    "href": "lekcije/lekcija-1-zadatak-1.html",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "",
+    "text": "Slobodni pad — obrada podataka i prvi graf sa greškama u Origin-u",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#tema",
+    "href": "lekcije/lekcija-1-zadatak-1.html#tema",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "",
+    "text": "Slobodni pad — obrada podataka i prvi graf sa greškama u Origin-u",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#podaci-unesiimportuj-u-tabelu",
+    "href": "lekcije/lekcija-1-zadatak-1.html#podaci-unesiimportuj-u-tabelu",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "Podaci (unesi/importuj u tabelu)",
+    "text": "Podaci (unesi/importuj u tabelu)\nKolone moraju biti: t, x, σx (sa jedinicama).\n\n\n\nt (s)\nx (m)\nσx (m)\n\n\n\n\n0.00\n0.000\n0.005\n\n\n0.10\n0.049\n0.005\n\n\n0.20\n0.196\n0.005\n\n\n0.30\n0.441\n0.005\n\n\n0.40\n0.784\n0.005\n\n\n0.50\n1.225\n0.005\n\n\n0.60\n1.764\n0.005",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#šta-treba-uraditi",
+    "href": "lekcije/lekcija-1-zadatak-1.html#šta-treba-uraditi",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "Šta treba uraditi",
+    "text": "Šta treba uraditi\n\nKreiraj projekat i u njega unesi/importuj podatke u jednu tabelu.\nJasno definiši u tabeli:\n\nnezavisnu varijablu t kao X (s),\nzavisnu varijablu x kao Y (m),\nnesigurnost σx kao grešku za Y (m).\n\nNapravi grafikon:\n\nscatter tačke za (x(t)),\nprikaži error bars koristeći σx.\n\nUredi graf da ispunjava minimalne naučne standarde:\n\nosa x: t (s)\nosa y: x (m)\nnaslov grafa: Slobodni pad: x(t)\nna graf dodaj tekst: σx = 0.005 m\n\nSačuvaj projekat i izvezi graf u fajl.",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#predaja",
+    "href": "lekcije/lekcija-1-zadatak-1.html#predaja",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "Predaja",
+    "text": "Predaja\n\nOrigin projekat: Lekcija1_Zadatak1_ImePrezime.opju\nIzvezeni graf: Graf1_SlobodniPad.pdf (ili PNG, 300 dpi)",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-1-zadatak-1.html#kriterijumi-checklist",
+    "href": "lekcije/lekcija-1-zadatak-1.html#kriterijumi-checklist",
+    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "section": "Kriterijumi (checklist)",
+    "text": "Kriterijumi (checklist)\n\ntabela ima nazive kolona i jedinice (t(s), x(m), σx(m))\nσx je korišten kao Y-greška\ngraf je scatter + error bars\nose i naslov su pravilno označeni\npredati su projekat i export grafa",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+    ]
+  },
+  {
     "objectID": "lekcije/lekcija-2-vizualizacija.html",
     "href": "lekcije/lekcija-2-vizualizacija.html",
     "title": "Lekcija 2 — Vizualizacija binomne raspodjele u Origin-u",
@@ -294,75 +366,123 @@
     ]
   },
   {
-    "objectID": "lekcije/lekcija-1-zadatak-1.html",
-    "href": "lekcije/lekcija-1-zadatak-1.html",
-    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
     "section": "",
-    "text": "Slobodni pad — obrada podataka i prvi graf sa greškama u Origin-u",
+    "text": "Ponovljena mjerenja — računanje srednje vrijednosti, standardne devijacije i prikaz podataka histogramom u Origin-u",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-1-zadatak-1.html#tema",
-    "href": "lekcije/lekcija-1-zadatak-1.html#tema",
-    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html#tema",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html#tema",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
     "section": "",
-    "text": "Slobodni pad — obrada podataka i prvi graf sa greškama u Origin-u",
+    "text": "Ponovljena mjerenja — računanje srednje vrijednosti, standardne devijacije i prikaz podataka histogramom u Origin-u",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-1-zadatak-1.html#podaci-unesiimportuj-u-tabelu",
-    "href": "lekcije/lekcija-1-zadatak-1.html#podaci-unesiimportuj-u-tabelu",
-    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
-    "section": "Podaci (unesi/importuj u tabelu)",
-    "text": "Podaci (unesi/importuj u tabelu)\nKolone moraju biti: t, x, σx (sa jedinicama).\n\n\n\nt (s)\nx (m)\nσx (m)\n\n\n\n\n0.00\n0.000\n0.005\n\n\n0.10\n0.049\n0.005\n\n\n0.20\n0.196\n0.005\n\n\n0.30\n0.441\n0.005\n\n\n0.40\n0.784\n0.005\n\n\n0.50\n1.225\n0.005\n\n\n0.60\n1.764\n0.005",
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html#cilj-lekcije",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html#cilj-lekcije",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
+    "section": "Cilj lekcije",
+    "text": "Cilj lekcije\nStudent treba da zna:\n\nunijeti seriju ponovljenih mjerenja u Origin,\nizračunati broj mjerenja, srednju vrijednost i standardnu devijaciju,\nnacrtati histogram mjerenja,\nna grafik dodati srednju vrijednost i interval srednja vrijednost ± standardna devijacija.",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-1-zadatak-1.html#šta-treba-uraditi",
-    "href": "lekcije/lekcija-1-zadatak-1.html#šta-treba-uraditi",
-    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
-    "section": "Šta treba uraditi",
-    "text": "Šta treba uraditi\n\nKreiraj projekat i u njega unesi/importuj podatke u jednu tabelu.\nJasno definiši u tabeli:\n\nnezavisnu varijablu t kao X (s),\nzavisnu varijablu x kao Y (m),\nnesigurnost σx kao grešku za Y (m).\n\nNapravi grafikon:\n\nscatter tačke za (x(t)),\nprikaži error bars koristeći σx.\n\nUredi graf da ispunjava minimalne naučne standarde:\n\nosa x: t (s)\nosa y: x (m)\nnaslov grafa: Slobodni pad: x(t)\nna graf dodaj tekst: σx = 0.005 m\n\nSačuvaj projekat i izvezi graf u fajl.",
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html#kratak-teorijski-podsjetnik",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html#kratak-teorijski-podsjetnik",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
+    "section": "Kratak teorijski podsjetnik",
+    "text": "Kratak teorijski podsjetnik\nZa niz mjerenja:\n\\[x_1, x_2, x_3, ..., x_N\\]\nSrednja vrijednost je:\n\\[\\bar{x} = \\frac{x_1 + x_2 + ... + x_N}{N} = \\frac{1}{N}\\sum_{i=1}^{N}x_i\\]\nStandardna devijacija uzorka je:\n\\[s = \\sqrt{\\frac{\\sum_{i=1}^{N}(x_i - \\bar{x})^2}{N-1}}\\]\nSrednja vrijednost pokazuje oko koje vrijednosti su mjerenja grupisana. Standardna devijacija pokazuje koliko se pojedinačna mjerenja tipično razlikuju od srednje vrijednosti.",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-1-zadatak-1.html#predaja",
-    "href": "lekcije/lekcija-1-zadatak-1.html#predaja",
-    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html#podaci",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html#podaci",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
+    "section": "Podaci",
+    "text": "Podaci\nMjeri se period oscilovanja klatna. Svako mjerenje daje jednu vrijednost perioda T.\nU Origin-u napravi tabelu sa kolonama i i T.\n\n\n\ni\nT (s)\n\n\n\n\n1\n1.24\n\n\n2\n1.27\n\n\n3\n1.25\n\n\n4\n1.26\n\n\n5\n1.23\n\n\n6\n1.28\n\n\n7\n1.25\n\n\n8\n1.24\n\n\n9\n1.27\n\n\n10\n1.26\n\n\n11\n1.25\n\n\n12\n1.29\n\n\n13\n1.24\n\n\n14\n1.26\n\n\n15\n1.27\n\n\n16\n1.25\n\n\n17\n1.23\n\n\n18\n1.28\n\n\n19\n1.26\n\n\n20\n1.24",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html#zadatak-1-izračunavanje-osnovnih-statističkih-veličina",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html#zadatak-1-izračunavanje-osnovnih-statističkih-veličina",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
+    "section": "Zadatak 1: Izračunavanje osnovnih statističkih veličina",
+    "text": "Zadatak 1: Izračunavanje osnovnih statističkih veličina\n\nŠta treba izračunati\nZa kolonu T (s) izračunaj:\n\nbroj mjerenja N,\nsrednju vrijednost T̄,\nstandardnu devijaciju uzorka s.\n\n\n\nUputstvo u Origin-u\n\nUnesi podatke u novu tabelu.\nKolonu i definiši kao X.\nKolonu T definiši kao Y i dodaj jedinicu s.\nSelektuj kolonu T.\nOtvori:\nAnalysis &gt; Descriptive Statistics &gt; Statistics on Columns\nU izvještaju prikaži najmanje:\n\nN,\nMean,\nStandard Deviation.\n\nRezultate zaokruži na tri decimale za srednju vrijednost i standardnu devijaciju.\n\n\n\nKontrola rezultata\nAko je račun urađen pravilno, približno se dobija:\n\n\n\nVeličina\nVrijednost\n\n\n\n\nN\n20\n\n\nT̄\n1.256 s\n\n\ns\n0.017 s",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html#zadatak-2-histogram-mjerenja",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html#zadatak-2-histogram-mjerenja",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
+    "section": "Zadatak 2: Histogram mjerenja",
+    "text": "Zadatak 2: Histogram mjerenja\n\nŠta treba nacrtati\nNacrtaj histogram vrijednosti perioda T.\nHistogram treba da pokaže koliko se puta pojavljuju vrijednosti perioda u određenim intervalima.\n\n\nUputstvo u Origin-u\n\nSelektuj kolonu T.\nKreiraj histogram:\nPlot &gt; Statistics &gt; Histogram\nUredi ose:\n\nosa x: Period T (s),\nosa y: Učestalost.\n\nNaslov grafa postavi na:\nHistogram ponovljenih mjerenja perioda klatna\nNa graf dodaj tekst:\nT̄ = 1.256 s, s = 0.017 s\nNa graf dodaj tri vertikalne linije:\n\nkroz T̄ = 1.256 s,\nkroz T̄ - s = 1.239 s,\nkroz T̄ + s = 1.273 s.\n\nLiniju za srednju vrijednost prikaži punom linijom, a linije za T̄ - s i T̄ + s isprekidanim linijama.",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html#zadatak-3-kratka-analiza",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html#zadatak-3-kratka-analiza",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
+    "section": "Zadatak 3: Kratka analiza",
+    "text": "Zadatak 3: Kratka analiza\nOdgovori u nekoliko rečenica:\n\nOko koje vrijednosti su mjerenja najviše grupisana?\nŠta znači standardna devijacija od približno 0.017 s u ovom primjeru?\nDa li postoji mjerenje koje vidljivo odstupa od ostalih?\nZašto histogram nije potpuno gladak ako imamo samo 20 mjerenja?",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
+    ]
+  },
+  {
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html#predaja",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html#predaja",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
     "section": "Predaja",
-    "text": "Predaja\n\nOrigin projekat: Lekcija1_Zadatak1_ImePrezime.opju\nIzvezeni graf: Graf1_SlobodniPad.pdf (ili PNG, 300 dpi)",
+    "text": "Predaja\nPredati:\n\nOrigin projekat: Lekcija3_SrednjaDevijacija_ImePrezime.opju\nIzvezeni graf: Graf_Histogram_PeriodKlatna.pdf ili PNG u rezoluciji 300 dpi\nKratke odgovore na pitanja iz Zadatka 3",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
     ]
   },
   {
-    "objectID": "lekcije/lekcija-1-zadatak-1.html#kriterijumi-checklist",
-    "href": "lekcije/lekcija-1-zadatak-1.html#kriterijumi-checklist",
-    "title": "Lekcija 1 — Zadatak 1 (samo uputstvo)",
+    "objectID": "lekcije/lekcija-3-srednja-devijacija-graf.html#kriterijumi-checklist",
+    "href": "lekcije/lekcija-3-srednja-devijacija-graf.html#kriterijumi-checklist",
+    "title": "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf",
     "section": "Kriterijumi (checklist)",
-    "text": "Kriterijumi (checklist)\n\ntabela ima nazive kolona i jedinice (t(s), x(m), σx(m))\nσx je korišten kao Y-greška\ngraf je scatter + error bars\nose i naslov su pravilno označeni\npredati su projekat i export grafa",
+    "text": "Kriterijumi (checklist)\n\ntabela ima pravilno označene kolone i i T (s)\nizračunati su N, T̄ i s\nkorištena je standardna devijacija uzorka\nnacrtan je histogram kolone T\nose imaju nazive i jedinice\nna grafu su označeni T̄, T̄ - s i T̄ + s\ngraf je izvezen u PDF ili PNG formatu",
     "crumbs": [
       "Početna",
       "Lekcije",
-      "Lekcija 1 — Zadatak 1 (samo uputstvo)"
+      "Lekcija 3 — Srednja vrijednost, standardna devijacija i graf"
     ]
   },
   {
@@ -370,7 +490,7 @@
     "href": "lekcije/index.html",
     "title": "Lekcije",
     "section": "",
-    "text": "Lekcija 1 — Zadatak 1 (samo uputstvo)\n\n\n\n\n\nTeorijske osnove binomne raspodjele - Očekivanje, Bernoulijev eksperiment, Binomna raspodjela\nVizualizacija u Origin-u - Praktični zadaci i grafici",
+    "text": "Lekcija 1 — Zadatak 1 (samo uputstvo)\n\n\n\n\n\nTeorijske osnove binomne raspodjele - Očekivanje, Bernoulijev eksperiment, Binomna raspodjela\nVizualizacija u Origin-u - Praktični zadaci i grafici\n\n\n\n\n\nSrednja vrijednost, standardna devijacija i graf - Ponovljena mjerenja, histogram i osnovna analiza",
     "crumbs": [
       "Početna",
       "Lekcije",
@@ -395,6 +515,18 @@
     "title": "Lekcije",
     "section": "",
     "text": "Teorijske osnove binomne raspodjele - Očekivanje, Bernoulijev eksperiment, Binomna raspodjela\nVizualizacija u Origin-u - Praktični zadaci i grafici",
+    "crumbs": [
+      "Početna",
+      "Lekcije",
+      "Lekcije"
+    ]
+  },
+  {
+    "objectID": "lekcije/index.html#lekcija-3-deskriptivna-statistika",
+    "href": "lekcije/index.html#lekcija-3-deskriptivna-statistika",
+    "title": "Lekcije",
+    "section": "",
+    "text": "Srednja vrijednost, standardna devijacija i graf - Ponovljena mjerenja, histogram i osnovna analiza",
     "crumbs": [
       "Početna",
       "Lekcije",

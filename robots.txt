@@ -1,1 +1,0 @@
-Sitemap: https://yukawa1.github.io/orm.github.io/sitemap.xml

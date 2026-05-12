@@ -173,6 +173,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lekcije/lekcija-3-srednja-devijacija-graf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lekcija 3 — Srednja vrijednost, standardna devijacija i graf</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -189,6 +195,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#lekcija-1-osnove-origin-a" id="toc-lekcija-1-osnove-origin-a" class="nav-link" data-scroll-target="#lekcija-1-osnove-origin-a">Lekcija 1: Osnove Origin-a</a></li>
   <li><a href="#lekcija-2-binomna-raspodjela" id="toc-lekcija-2-binomna-raspodjela" class="nav-link" data-scroll-target="#lekcija-2-binomna-raspodjela">Lekcija 2: Binomna raspodjela</a></li>
+  <li><a href="#lekcija-3-deskriptivna-statistika" id="toc-lekcija-3-deskriptivna-statistika" class="nav-link" data-scroll-target="#lekcija-3-deskriptivna-statistika">Lekcija 3: Deskriptivna statistika</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -228,6 +235,12 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><a href="../lekcije/lekcija-2-teorija-binomne.html">Teorijske osnove binomne raspodjele</a> - Očekivanje, Bernoulijev eksperiment, Binomna raspodjela</li>
 <li><a href="../lekcije/lekcija-2-vizualizacija.html">Vizualizacija u Origin-u</a> - Praktični zadaci i grafici</li>
+</ol>
+</section>
+<section id="lekcija-3-deskriptivna-statistika" class="level2">
+<h2 class="anchored" data-anchor-id="lekcija-3-deskriptivna-statistika">Lekcija 3: Deskriptivna statistika</h2>
+<ol type="1">
+<li><a href="../lekcije/lekcija-3-srednja-devijacija-graf.html">Srednja vrijednost, standardna devijacija i graf</a> - Ponovljena mjerenja, histogram i osnovna analiza</li>
 </ol>
 
 
@@ -308,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/yukawa1\.github\.io\/orm\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
